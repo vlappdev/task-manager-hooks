@@ -1,3 +1,67 @@
+@import 'mixins/flexbox';
+
+$color-gray:                #B7BEC7;
+$color-gray-dark:           #707090;
+$color-blue:                #9EA7FC;
+$color-bg:                  #EEF2F9;
+
 html{
-    background: green;
+    height: 100%;
 }
+html, body{
+    min-height: 100%;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: red;
+}
+#root, .app{
+    min-height: 100vh;
+    background-color: $color-bg;
+}
+.navbar{
+    background: linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
+    position: relative;
+    padding-left: 0;
+    text-align: center;
+}
+.navbar-brand{
+    position: absolute;
+    height: 100%;
+    max-width: 120px;
+    width: 100%;
+    background: rgba(50, 50, 93, 0.2);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+.navbar-collapse{
+    @include justify-content(space-between);
+    margin-left: 120px;
+    width: 100%;
+}
+
+.side-menu{
+    width: 100%;
+    max-width: 120px;
+
+    .nav-item{
+        &.active{
+            border-left: 3px solid $color-blue;
+        }
+    }
+
+    .nav-link{
+        color: $color-gray;
+        padding: 30px 10px;
+    }
+}
+
+
+
