@@ -1,1 +1,3 @@
-# 03-react
+# Kanban app
+
+001 - added sass as style on project
