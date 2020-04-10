@@ -4,6 +4,11 @@ $color-gray:                #B7BEC7;
 $color-gray-dark:           #707090;
 $color-blue:                #9EA7FC;
 $color-bg:                  #EEF2F9;
+$color-bg-2:                rgba(255, 255, 255, 0.5);
+$color-green:               #82C786;
+$color-rose:                #E57373;
+$color-orange:              #FF9784;
+$color-white:              #FFFFFF;
 
 html{
     height: 100%;
@@ -16,7 +21,6 @@ html, body{
 }
 body{
     font-family: sans-serif;
-    background-color: red;
 }
 #root, .app{
     min-height: 100vh;
@@ -27,6 +31,11 @@ body{
     position: relative;
     padding-left: 0;
     text-align: center;
+    min-height: 60px;
+
+    .form-control::-webkit-input-placeholder {
+        color: #FFFFFF;
+    }
 }
 .navbar-brand{
     position: absolute;
@@ -62,6 +71,44 @@ body{
         padding: 30px 10px;
     }
 }
+.board-container{
+    color: $color-gray-dark;
+}
+.board-1, .board-2, .board-3, .board-4{
+    background-color: $color-bg-2;
+    max-width: 280px;
+    width: 100%;
+}
+.board-1{
+    border-top-color: $color-rose !important;
+}
+.board-2{
+    border-top-color: $color-orange !important;
+}
+.low-priority{
+    background-color: $color-blue;
+    display: inline-block;
+    font-size: .85rem;
+}
+.med-priority{
+    background-color: $color-green;
+    display: inline-block;
+    font-size: .85rem;
+}
+.high-priority{
+    background-color: $color-rose;
+    display: inline-block;
+    font-size: .85rem;
+}
+.border-top-3{
+    border-top-width: 3px !important;
+}
+.card-icon{
+    height: 2.2rem;
+}
+
+
+
 
 
 
