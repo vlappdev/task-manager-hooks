@@ -4,4 +4,5 @@
 002 - added mixin in project for flexbox
 003 - added side-menu
 004 - fixed header and added bord container (simple markup and style)
-005 - added react routerm and separated code in 2 components(Dashboard and AddNewTask) 
+005 - added react router and separated code in 2 components(Dashboard and AddNewTask)
+006 - separated components and added functionality 
