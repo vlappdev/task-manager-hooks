@@ -8,10 +8,68 @@ import iconAddUser from "../assets/icon-add-user.svg";
 class Dashboard extends Component{
 
     typeOfBoards = [
-        { titleBoard:'Backlog', color: 'board-1' },
-        { titleBoard:'In Progess', color: 'board-2' },
-        { titleBoard:'Review', color: 'board-3' },
-        { titleBoard:'Complete,', color: 'board-4' }
+        {   titleBoard:'Backlog',
+            color: 'board-1',
+            cards:[
+                    {
+                        priority:'low priority',
+                        desc:'task desc',
+                        messages: 2,
+                        attachments: 4,
+                        color: 'low-priority'
+                    },
+                    {
+                        priority:'med priority',
+                        desc:'task desc',
+                        messages: 2,
+                        attachments: 4,
+                        color: 'med-priority'
+                    }
+                ]
+        },
+        {   titleBoard:'In Progess',
+            color: 'board-2',
+            cards:[
+                {
+                    priority:'low priority',
+                    desc:'task desc',
+                    messages: 2,
+                    attachments: 4,
+                    color: 'low-priority'
+                }
+            ]
+        },
+        {   titleBoard:'Review',
+            color: 'board-3',
+            cards:[
+                {
+                    priority:'low priority',
+                    desc:'task desc',
+                    messages: 2,
+                    attachments: 4,
+                    color: 'low-priority'
+                }
+            ]
+        },
+        {   titleBoard:'Complete',
+            color: 'board-4',
+            cards:[
+                {
+                    priority:'low priority',
+                    desc:'task desc',
+                    messages: 2,
+                    attachments: 4,
+                    color: 'low-priority'
+                },
+                {
+                    priority:'med priority',
+                    desc:'task desc',
+                    messages: 2,
+                    attachments: 4,
+                    color: 'med-priority'
+                }
+            ]
+        }
     ];
 
     // setTypeOfBoard = () => {
