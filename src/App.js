@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route }from 'react-router-dom'
 import Dashboard from './boards/Dashboard'
 import AddNewTask from "./modal/AddNewTask"
 import AppContext from './AppContext'
+import data from './data/data';
 
 import iconManage from './assets/icon-manage.svg'
 import iconBoards from './assets/icon-boards.svg'
@@ -17,12 +18,12 @@ import iconAlert from './assets/icon-alert.svg'
 class App extends Component{
 
     state = {
-        updatedTitleName: 'default title name'
+        setNewTask: {}
     };
 
     update = value => {
         this.setState({
-            updatedTitleName: value
+            setNewTask: value
         })
     };
 
@@ -105,15 +106,16 @@ class App extends Component{
                             </li>
                         </ul>
                         <Switch>
-                            <AppContext.Provider value={this.state.updatedTitleName}>
-                                <Route exact path='/' component={ Dashboard }/>
-                                <Route exact path='/new-task'
-                                       render={(routeProps) => (<AddNewTask {...routeProps} propFromApp={this.update}/>)}
+                            <AppContext.Provider value="dafault string from provider">
+                                <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} propApp={ data }/> )}
+                                />
+                                <Route path='/new-task'
+                                       render={(routeProps) => (<AddNewTask {...routeProps} propFromApp={ this.update } propData={ data }/>)}
                                 />
                             </AppContext.Provider>
                         </Switch>
                     </div>
-                    <p>{this.state.updatedTitleName}</p>
+                    <p>{this.state.setNewTask.priority}</p>
                 </div>
             </BrowserRouter>
         )
