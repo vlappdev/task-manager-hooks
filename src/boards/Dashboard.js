@@ -13,14 +13,14 @@ class Dashboard extends Component{
             cards:[
                     {
                         priority:'low priority',
-                        desc:'task desc',
+                        title:'task desc',
                         messages: 2,
                         attachments: 4,
                         color: 'low-priority'
                     },
                     {
                         priority:'med priority',
-                        desc:'task desc',
+                        title:'task desc',
                         messages: 2,
                         attachments: 4,
                         color: 'med-priority'
@@ -32,7 +32,7 @@ class Dashboard extends Component{
             cards:[
                 {
                     priority:'low priority',
-                    desc:'task desc',
+                    title:'task desc',
                     messages: 2,
                     attachments: 4,
                     color: 'low-priority'
@@ -44,7 +44,7 @@ class Dashboard extends Component{
             cards:[
                 {
                     priority:'low priority',
-                    desc:'task desc',
+                    title:'task desc',
                     messages: 2,
                     attachments: 4,
                     color: 'low-priority'
@@ -56,14 +56,14 @@ class Dashboard extends Component{
             cards:[
                 {
                     priority:'low priority',
-                    desc:'task desc',
+                    title:'task desc',
                     messages: 2,
                     attachments: 4,
                     color: 'low-priority'
                 },
                 {
                     priority:'med priority',
-                    desc:'task desc',
+                    title:'task desc',
                     messages: 2,
                     attachments: 4,
                     color: 'med-priority'

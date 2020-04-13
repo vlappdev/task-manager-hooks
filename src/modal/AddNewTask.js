@@ -5,7 +5,7 @@ import { Link }from 'react-router-dom';
 class AddNewTask extends Component{
 
     state = {
-        taskTitle:'Enter task name'
+        taskTitle:'Enter task title'
     }
 
     handleSubmit = (e) => {

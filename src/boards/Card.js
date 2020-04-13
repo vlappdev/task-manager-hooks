@@ -10,7 +10,7 @@ class Card extends Component{
         return (
             <div className="bg-white p-2 mt-3">
                 <div className={this.props.cards.color + " low-priority text-white rounded-sm px-2 py-1"}>{this.props.cards.priority}</div>
-                <p className="mt-3">{this.props.cards.desc}</p>
+                <p className="mt-3">{this.props.cards.title}</p>
                 <div className="d-flex justify-content-between">
                     <div className="d-flex">
                         <div className="d-flex align-items-center">
