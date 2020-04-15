@@ -7,4 +7,4 @@
 005 - added react router and separated code in 2 components(Dashboard and AddNewTask)
 006 - separated components and added functionality
 007 - display in every board iterated task card
-c
+008 - separated components Header and SideMenu 
