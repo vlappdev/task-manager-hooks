@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Board from './Board'
-import iconDropDown from "../assets/icon-drop-down.svg";
-import iconAvatar from "../assets/icon-avatar.svg";
-import iconAddUser from "../assets/icon-add-user.svg";
+import iconDropDown from "../../assets/icon-drop-down.svg";
+import iconAvatar from "../../assets/icon-avatar.svg";
+import iconAddUser from "../../assets/icon-add-user.svg";
 
 
 class Dashboard extends Component{

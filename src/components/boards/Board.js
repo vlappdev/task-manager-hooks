@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Card from "./Card";
 import {Link} from "react-router-dom";
-import iconAddTask from "../assets/icon-add-task.svg";
+import iconAddTask from "../../assets/icon-add-task.svg";
 
 
 class Board extends Component{

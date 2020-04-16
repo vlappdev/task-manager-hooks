@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import iconMessage from "../assets/icon-message.svg";
-import iconAttach from "../assets/icon-attach.svg";
-import iconAddUser from "../assets/icon-add-user.svg";
-import iconAvatar from "../assets/icon-avatar.svg";
+import iconMessage from "../../assets/icon-message.svg";
+import iconAttach from "../../assets/icon-attach.svg";
+import iconAddUser from "../../assets/icon-add-user.svg";
+import iconAvatar from "../../assets/icon-avatar.svg";
 
 
 class Card extends Component{
