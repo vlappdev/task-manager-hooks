@@ -4,18 +4,26 @@ import { Link }from 'react-router-dom';
 
 class AddNewTask extends Component{
 
-    state = {
-        priority: 'low priority',
-        title:'Enter task title',
-        messages:2,
-        attachments:1,
-    };
+    constructor(props){
+        super(props);
+
+        const currentCards = this.props.passData[0].cards;
+        const initNewCardId = Math.max(...currentCards.map((card) => card.cardId)) + 1;
+
+        this.state = {
+            cardId: initNewCardId,
+            priority: 'low priority',
+            title:'Enter task title',
+            // messages:2,
+            // attachments:1
+        }
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.propFromApp(this.state);
-
         this.addNewTask();
+
+        this.props.updateApp(this.state);
 
         this.setState({
             title:''
@@ -23,6 +31,7 @@ class AddNewTask extends Component{
     };
 
     handleOnChange = (e) => {
+
         this.setState({
             [e.target.name]: e.target.value
         });
@@ -30,7 +39,14 @@ class AddNewTask extends Component{
     };
 
     addNewTask = () => {
-        this.props.propData[0].cards.push(this.state)
+
+        const currentCards = this.props.passData[0].cards;
+
+        this.setState({
+            cardId: this.state.cardId + 1
+        });
+
+        currentCards.push(this.state)
     };
 
     render() {

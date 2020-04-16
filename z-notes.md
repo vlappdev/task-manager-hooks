@@ -9,3 +9,5 @@
 007 - display in every board iterated task card
 008 - separated components Header and SideMenu 
 009 - added functionality delete task and separated data
+010 - fixed card index when we add card
+

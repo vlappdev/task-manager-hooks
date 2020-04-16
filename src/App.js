@@ -31,7 +31,7 @@ class App extends Component{
                                 <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} propApp={ data }/> )}
                                 />
                                 <Route path='/new-task'
-                                       render={(routeProps) => (<AddNewTask {...routeProps} propFromApp={ this.update } propData={ data }/>)}
+                                       render={(routeProps) => (<AddNewTask {...routeProps} updateApp={ this.update } passData={ data }/>)}
                                 />
                             </AppContext.Provider>
                         </Switch>
