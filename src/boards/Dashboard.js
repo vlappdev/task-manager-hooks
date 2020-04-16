@@ -32,7 +32,7 @@ class Dashboard extends Component{
                 </div>
                 <div className="d-flex justify-content-between">
                     { this.props.propApp.map((item, index) => {
-                            return <Board key={index} {...item} />
+                            return <Board key={ index } { ...item } />
                         })
                     }
                 </div>

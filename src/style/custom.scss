@@ -112,6 +112,12 @@ body{
 .card-icon{
     height: 2.2rem;
 }
+.close{
+    opacity: 0.35 !important;
+    &:hover{
+        opacity: 0.50 !important;
+    }
+}
 .form-add-new-task{
     max-width: 400px;
 }

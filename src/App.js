@@ -115,7 +115,6 @@ class App extends Component{
                             </AppContext.Provider>
                         </Switch>
                     </div>
-                    <p>{this.state.setNewTask.priority}</p>
                 </div>
             </BrowserRouter>
         )
