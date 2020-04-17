@@ -14,13 +14,14 @@ class Card extends Component{
     render() {
 
         const card = this.props.card;
+        const priorityColor = card.priority.replace(' ', '-')
 
         return (
             <div className="bg-white p-2 mt-3">
                 <button onClick={ () => this.removeCard(card.cardId) } type="button" className="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <div className={ card.color + " text-white rounded-sm px-2 py-1"}>{ card.priority }</div>
+                <div className={ priorityColor + " text-white rounded-sm px-2 py-1"}>{ card.priority }</div>
                 <p className="mt-3">{ card.title }</p>
                 <div className="d-flex justify-content-between">
                     <div className="d-flex">
