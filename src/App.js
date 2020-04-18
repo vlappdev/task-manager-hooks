@@ -9,11 +9,8 @@ import SideMenu from './components/SideMenu'
 
 class App extends Component{
 
-    state = {
-        setNewTask: {}
-    };
-
     update = value => {
+
         this.setState({
             setNewTask: value
         })

@@ -8,19 +8,22 @@ class AddNewTask extends Component{
         super(props);
 
         const currentCards = this.props.passData[0].cards;
+
         const initNewCardId = Math.max(...currentCards.map((card) => card.cardId)) + 1;
 
         this.state = {
             cardId: initNewCardId,
             priority: 'low priority',
             title:'Enter task title',
-            // messages:2,
-            // attachments:1
+            messages:2,
+            attachments:1,
+            status: 'Backlog'
         }
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
+
         this.addNewTask();
 
         this.props.updateApp(this.state);

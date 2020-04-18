@@ -11,5 +11,6 @@
 009 - added functionality delete task and separated data
 010 - fixed card index when we add card
 011 - fixed color of task priority
-012 - moved all functionalities to Daschboard and changed structure of data 
+012 - moved all functionalities to Daschboard and changed structure of data
+013 - fixed add card 
 
