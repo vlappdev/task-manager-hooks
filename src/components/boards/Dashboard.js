@@ -7,11 +7,41 @@ import iconAddUser from "../../assets/icon-add-user.svg";
 
 class Dashboard extends Component{
 
+    constructor(props){
+        super(props);
+
+        const INITIAL_STATE = this.props.passData[0];
+
+        this.state = {
+            ...INITIAL_STATE
+        }
+    }
+
     // setTypeOfBoard = () => {
     //     return this.typeOfBoards.map((item, index) => {
     //         return <Board key={index} {...item} />
     //     })
     // };
+
+    update = cardId => {
+        const notDeletedCards = this.deleteCard(cardId)
+
+        return this.setState(
+            {
+                cards:[
+                    ...notDeletedCards
+                ]
+            }
+        );
+    };
+
+    deleteCard = (id) => {
+        const cards = this.state.cards;
+
+        return cards.filter((item) => {
+            return item.cardId !== id
+        });
+    };
 
     render(){
         return(
@@ -31,8 +61,16 @@ class Dashboard extends Component{
                     </div>
                 </div>
                 <div className="d-flex justify-content-between">
-                    { this.props.propApp.map((item, index) => {
-                            return <Board key={ index } { ...item } />
+                    { this.state.cardStatuses.map((statusItem, index) => {
+
+                            const cards = this.state.cards;
+                            const cardsByStatus = cards.filter(card => card.status === statusItem.title);
+
+                            return <Board
+                                        key={ index } { ...statusItem }
+                                        appProp={ this.update }
+                                        passCards={ cardsByStatus }
+                                    />
                         })
                     }
                 </div>

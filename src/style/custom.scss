@@ -74,21 +74,21 @@ body{
 .board-container{
     color: $color-gray-dark;
 }
-.board-1, .board-2, .board-3, .board-4{
+.status-1, .status-2, .status-3, .status-4{
     background-color: $color-bg-2;
     max-width: 280px;
     width: 100%;
 }
-.board-1{
+.status-1{
     border-top-color: $color-rose !important;
 }
-.board-2{
+.status-2{
     border-top-color: $color-orange !important;
 }
-.board-3{
+.status-3{
     border-top-color: $color-blue !important;
 }
-.board-4{
+.status-4{
     border-top-color: $color-green !important;
 }
 .low-priority{

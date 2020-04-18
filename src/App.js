@@ -28,7 +28,7 @@ class App extends Component{
                         <SideMenu/>
                         <Switch>
                             <AppContext.Provider value="dafault string from provider">
-                                <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} propApp={ data }/> )}
+                                <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} passData={ data }/> )}
                                 />
                                 <Route path='/new-task'
                                        render={(routeProps) => (<AddNewTask {...routeProps} updateApp={ this.update } passData={ data }/>)}

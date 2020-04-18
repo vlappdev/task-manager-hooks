@@ -6,25 +6,6 @@ import iconAddTask from "../../assets/icon-add-task.svg";
 
 class Board extends Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            ...props
-        }
-    }
-
-    update = cardId => {
-
-        const notDeletedCards = this.state.cards.filter((item) => {
-            return item.cardId !== cardId
-        });
-
-        this.setState({
-            cards: notDeletedCards
-        });
-    };
-
-
     // setCards = () => {
     //     return this.props.cards.map((item, index) => {
     //         return <Card key={ index } cards={ item }/>
@@ -33,11 +14,11 @@ class Board extends Component{
 
     render() {
         return(
-            <div className={this.state.color + " p-3 border-top-3 border-top rounded-lg"}>
-                <h4>{this.state.titleBoard}</h4>
+            <div className={ this.props.color + " p-3 border-top-3 border-top rounded-lg"}>
+                <h4>{ this.props.title }</h4>
                 {
-                    this.state.cards.map((card, index) => {
-                        return <Card key={ index } card={ card } setIdCard={ (id) => this.update(id) }/>
+                    this.props.passCards.map((card, index) => {
+                        return <Card key={ index } card={ card } setIdCard={this.props.appProp}/>
                     })
                 }
                 <div className="text-center mt-4 mb-2">
