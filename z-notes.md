@@ -13,4 +13,5 @@
 011 - fixed color of task priority
 012 - moved all functionalities to Daschboard and changed structure of data
 013 - fixed add card 
+014 - fixed data call and fixed add card
 

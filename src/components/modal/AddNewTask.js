@@ -7,18 +7,23 @@ class AddNewTask extends Component{
     constructor(props){
         super(props);
 
-        const currentCards = this.props.passData[0].cards;
-
-        const initNewCardId = Math.max(...currentCards.map((card) => card.cardId)) + 1;
-
         this.state = {
-            cardId: initNewCardId,
-            priority: 'low priority',
-            title:'Enter task title',
-            messages:2,
-            attachments:1,
-            status: 'Backlog'
-        }
+            ...props.passData
+        };
+
+        const currentCards = this.state.cards;
+
+        const initCard = {
+                            cardId: null,
+                            priority: 'low priority',
+                            title:'Enter task title',
+                            messages:2,
+                            attachments:1,
+                            status: 'Backlog'
+                        };
+
+        this.state.cards = [...currentCards, initCard]
+
     }
 
     handleSubmit = (e) => {
@@ -26,30 +31,45 @@ class AddNewTask extends Component{
 
         this.addNewTask();
 
-        this.props.updateApp(this.state);
+        console.log(this.state.cards);
 
-        this.setState({
-            title:''
-        })
+
+        // this.setState({
+        //     title:''
+        // })
     };
 
     handleOnChange = (e) => {
 
-        this.setState({
-            [e.target.name]: e.target.value
-        });
+        const cards = this.state.cards;
 
+        const index = this.state.cards.length - 1;
+
+        const initialCard = cards[index];
+        const newCard = { [e.target.name]: e.target.value };
+
+        cards[index]  = {...initialCard, ...newCard}
+
+        this.setState({
+            cards: cards
+        });
     };
 
     addNewTask = () => {
 
-        const currentCards = this.props.passData[0].cards;
+        const cards = this.state.cards;
 
-        this.setState({
-            cardId: this.state.cardId + 1
+        const cardId = Math.max(...cards.map((card) => card.cardId)) + 1;
+
+        this.setState( (prevState) =>{
+
+            const index = prevState.cards.length - 1;
+
+             return prevState.cards[index].cardId = cardId;
+
         });
 
-        currentCards.push(this.state)
+        this.props.updateApp(this.state)
     };
 
     render() {

@@ -10,7 +10,7 @@ class Dashboard extends Component{
     constructor(props){
         super(props);
 
-        const INITIAL_STATE = this.props.passData[0];
+        const INITIAL_STATE = this.props.passData;
 
         this.state = {
             ...INITIAL_STATE
@@ -26,13 +26,17 @@ class Dashboard extends Component{
     update = cardId => {
         const notDeletedCards = this.deleteCard(cardId)
 
-        return this.setState(
+        this.setState(
             {
                 cards:[
                     ...notDeletedCards
                 ]
             }
         );
+
+        this.props.updateApp(this.state)
+
+        return this.state
     };
 
     deleteCard = (id) => {

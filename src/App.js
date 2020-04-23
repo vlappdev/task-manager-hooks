@@ -8,15 +8,22 @@ import Navbar from './components/Navbar'
 import SideMenu from './components/SideMenu'
 
 class App extends Component{
+    constructor(){
+        super();
 
-    update = value => {
+        this.state = {
+            ...data[0]
+        };
+    };
 
+    updateAppState = value => {
         this.setState({
-            setNewTask: value
+            ...value
         })
     };
 
     render(){
+        console.log(this.state)
         return (
             <BrowserRouter>
                 <div className="app d-flex flex-column">
@@ -25,10 +32,10 @@ class App extends Component{
                         <SideMenu/>
                         <Switch>
                             <AppContext.Provider value="dafault string from provider">
-                                <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} passData={ data }/> )}
+                                <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} passData={ this.state } updateApp={ this.updateAppState }/> )}
                                 />
                                 <Route path='/new-task'
-                                       render={(routeProps) => (<AddNewTask {...routeProps} updateApp={ this.update } passData={ data }/>)}
+                                       render={(routeProps) => (<AddNewTask {...routeProps} passData={ this.state } updateApp={ this.updateAppState } />)}
                                 />
                             </AppContext.Provider>
                         </Switch>
