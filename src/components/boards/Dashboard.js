@@ -26,17 +26,16 @@ class Dashboard extends Component{
     update = cardId => {
         const notDeletedCards = this.deleteCard(cardId)
 
-        this.setState(
-            {
-                cards:[
-                    ...notDeletedCards
-                ]
-            }
+        this.setState({
+                cards : [...notDeletedCards ]
+            }, this.updateAppState
         );
 
-        this.props.updateApp(this.state)
-
         return this.state
+    };
+
+    updateAppState = () =>{
+        this.props.updateApp(this.state)
     };
 
     deleteCard = (id) => {
