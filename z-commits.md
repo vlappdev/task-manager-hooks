@@ -21,4 +21,5 @@
 branch feature/edit
 
 018 - added basic functionality for edit task 
+019 - close "edit task page" after submit
 
