@@ -3,18 +3,25 @@ import { BrowserRouter, Switch, Route }from 'react-router-dom'
 import Dashboard from './components/boards/Dashboard'
 import AddNewTask from "./components/modal/AddNewTask"
 import AppContext from './AppContext'
-import data from './data/data';
 import Navbar from './components/Navbar'
 import SideMenu from './components/SideMenu'
 
 class App extends Component{
-    constructor(){
-        super();
 
-        this.state = {
-            ...data[0]
-        };
+    state = {
+        cardStatuses: [],
+        cards:[]
     };
+
+    componentDidMount() {
+        fetch('https://raw.githubusercontent.com/jahorinac/data/master/03-tasks.json')
+            .then(response =>{
+                return response.json()
+            })
+            .then(data => {
+                this.setState({...data[0]})
+            })
+    }
 
     updateAppState = value => {
         this.setState({

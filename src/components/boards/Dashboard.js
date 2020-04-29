@@ -7,16 +7,6 @@ import iconAddUser from "../../assets/icon-add-user.svg";
 
 class Dashboard extends Component{
 
-    constructor(props){
-        super(props);
-
-        const INITIAL_STATE = this.props.passData;
-
-        this.state = {
-            ...INITIAL_STATE
-        }
-    }
-
     // setTypeOfBoard = () => {
     //     return this.typeOfBoards.map((item, index) => {
     //         return <Board key={index} {...item} />
@@ -30,8 +20,6 @@ class Dashboard extends Component{
                 cards : [...notDeletedCards ]
             }, this.updateAppState
         );
-
-        return this.state
     };
 
     updateAppState = () =>{
@@ -39,7 +27,7 @@ class Dashboard extends Component{
     };
 
     deleteCard = (id) => {
-        const cards = this.state.cards;
+        const cards = this.props.passData.cards;
 
         return cards.filter((item) => {
             return item.cardId !== id
@@ -47,6 +35,7 @@ class Dashboard extends Component{
     };
 
     render(){
+        console.log(this.state)
         return(
             <div className="board-container w-100 px-5 py-4">
                 <div className="d-flex justify-content-between pb-4">
@@ -64,9 +53,9 @@ class Dashboard extends Component{
                     </div>
                 </div>
                 <div className="d-flex justify-content-between">
-                    { this.state.cardStatuses.map((statusItem, index) => {
+                    { this.props.passData.cardStatuses.map((statusItem, index) => {
 
-                            const cards = this.state.cards;
+                            const cards = this.props.passData.cards;
                             const cardsByStatus = cards.filter(card => card.status === statusItem.title);
 
                             return <Board

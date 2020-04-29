@@ -11,8 +11,9 @@
 009 - added functionality delete task and separated data
 010 - fixed card index when we add card
 011 - fixed color of task priority
-012 - moved all functionalities to Daschboard and changed structure of data
+012 - moved all functionalities to Dashboard and changed structure of data
 013 - fixed add card 
 014 - fixed data call and fixed add card
 015 - fixed update App component state after delete card
+016 - fetch data from repo and fixed Dashboard
 
