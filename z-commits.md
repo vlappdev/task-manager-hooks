@@ -18,3 +18,7 @@
 016 - fetch data from repo and fixed Dashboard
 017 - after submit new task, added functionality bask on button
 
+branch feature/edit
+
+018 - added basic functionality for edit task 
+

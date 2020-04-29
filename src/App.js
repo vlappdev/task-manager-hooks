@@ -5,6 +5,7 @@ import AddNewTask from "./components/modal/AddNewTask"
 import AppContext from './AppContext'
 import Navbar from './components/Navbar'
 import SideMenu from './components/SideMenu'
+import EditTask from './components/EditTask/EditTask'
 
 class App extends Component{
 
@@ -43,6 +44,9 @@ class App extends Component{
                                 <Route path='/new-task'
                                        render={(routeProps) => (<AddNewTask {...routeProps} passData={ this.state } updateApp={ this.updateAppState } />)}
                                 />
+                                <Route path='/edit/:id'>
+                                    <EditTask passData={this.state} updateApp={ this.updateAppState }/>
+                                </Route>
                             </AppContext.Provider>
                         </Switch>
                     </div>
