@@ -16,4 +16,5 @@
 014 - fixed data call and fixed add card
 015 - fixed update App component state after delete card
 016 - fetch data from repo and fixed Dashboard
+017 - after submit new task, added functionality bask on button
 
