@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Link }from 'react-router-dom';
 
 
 class AddNewTask extends Component{
@@ -73,6 +72,7 @@ class AddNewTask extends Component{
     };
 
     render() {
+        console.log(this.props)
         return (
             <div className="d-flex flex-grow-1 justify-content-center align-items-center">
                 <form onSubmit={this.handleSubmit} className="form-add-new-task w-100 position-relative">
@@ -113,8 +113,7 @@ class AddNewTask extends Component{
                     {/*    <label htmlFor="descriptionTask">Description task</label>*/}
                     {/*    <textarea className="form-control" id="descriptionTask" rows="3" placeholder='Enter description'></textarea>*/}
                     {/*</div>*/}
-                    <button type="submit" className="btn btn-primary">Add new task</button>
-                    <Link className='position-absolute back-button' to='/'>Back</Link>
+                    <button type="submit" className="btn btn-primary" onClick={() => this.props.history.push('/')}>Add new task</button>
                 </form>
             </div>
         );

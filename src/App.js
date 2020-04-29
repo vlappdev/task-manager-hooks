@@ -30,7 +30,6 @@ class App extends Component{
     };
 
     render(){
-        console.log(this.state)
         return (
             <BrowserRouter>
                 <div className="app d-flex flex-column">
