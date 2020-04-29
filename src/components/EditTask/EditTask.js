@@ -44,6 +44,8 @@ class EditTask extends Component {
         e.preventDefault();
 
         this.editCard()
+        this.props.history.push('/');
+        console.log(this.props)
     };
 
     render() {
