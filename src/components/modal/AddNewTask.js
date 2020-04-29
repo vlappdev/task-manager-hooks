@@ -71,7 +71,6 @@ class AddNewTask extends Component{
     };
 
     render() {
-        console.log(this.props)
         return (
             <div className="d-flex flex-grow-1 justify-content-center align-items-center">
                 <form onSubmit={this.handleSubmit} className="form-add-new-task w-100 position-relative">

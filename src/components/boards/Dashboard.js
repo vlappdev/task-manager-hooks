@@ -35,7 +35,6 @@ class Dashboard extends Component{
     };
 
     render(){
-        console.log(this.state)
         return(
             <div className="board-container w-100 px-5 py-4">
                 <div className="d-flex justify-content-between pb-4">
