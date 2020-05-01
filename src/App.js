@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route }from 'react-router-dom'
-import Dashboard from './components/boards/Dashboard'
-import AddNewTask from "./components/modal/AddNewTask"
+import Dashboard from './components/Boards/Dashboard'
+import AddNewTask from "./components/Modal/AddNewTask"
 import AppContext from './AppContext'
 import Navbar from './components/Navbar'
 import SideMenu from './components/SideMenu'
