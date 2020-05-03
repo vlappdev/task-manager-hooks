@@ -24,4 +24,5 @@ branch feature/edit
 019 - close "edit task page" after submit
 020 - added Dropdown with delete and edit on card
 021 - refactored addNewTask
+022 - fixed edit and delete card
 

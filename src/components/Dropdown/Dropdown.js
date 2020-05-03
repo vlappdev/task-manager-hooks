@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import iconTreeDots from "../../assets/icon-three-dots.svg";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
 class Dropdown extends Component {
     constructor(){
@@ -11,21 +11,30 @@ class Dropdown extends Component {
         };
     }
 
-    showDropdownMenu = (event) => {
-        event.preventDefault();
+    showDropdownMenu = (e) => {
+        e.preventDefault();
         this.setState({ displayMenu: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     };
 
-    hideDropdownMenu = () => {
+    hideDropdownMenu = (isDeleteLink) => {
         this.setState({ displayMenu: false }, () => {
             document.removeEventListener('click', this.hideDropdownMenu);
-        });
 
+            if(!isDeleteLink){
+                this.props.history.push("edit/" + this.props.cardId)
+            }
+        });
     };
 
-    removeCard = (id) => {
+    redirectToEditCard = (e) => {
+        e.preventDefault();
+        this.hideDropdownMenu(!e.defaultPrevented)
+    };
+
+    removeCard = (evt, id) => {
+        this.hideDropdownMenu(!evt.defaultPrevented);
         this.props.setIdCard(id);
     };
 
@@ -38,8 +47,8 @@ class Dropdown extends Component {
 
                 { this.state.displayMenu ? (
                         <div className="dropdown-menu d-block task-dropdown">
-                            <Link to={"edit/" + this.props.cardId} className="dropdown-item">Edit</Link>
-                            <Link to="/" onClick={ () => this.removeCard(this.props.cardId) } className="dropdown-item">Delete</Link>
+                            <Link to="" onClick={this.redirectToEditCard} className="dropdown-item">Edit</Link>
+                            <Link to="/" onClick={ (e) => this.removeCard(e, this.props.cardId) } className="dropdown-item">Delete</Link>
                         </div>
                     ):
                     (
@@ -52,4 +61,4 @@ class Dropdown extends Component {
     }
 }
 
-export default Dropdown;
+export default withRouter(Dropdown);
