@@ -25,4 +25,5 @@ branch feature/edit
 020 - added Dropdown with delete and edit on card
 021 - refactored addNewTask
 022 - fixed edit and delete card
+023 - added custom-variables.scss
 

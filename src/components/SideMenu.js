@@ -9,24 +9,24 @@ class SideMenu extends Component{
         return (
             <ul className="side-menu nav flex-column bg-white">
                 <li className="nav-item">
-                    <a className="nav-link d-flex flex-column align-items-center active" href="#">
+                    <a className="nav-link d-flex flex-column align-items-center active text-gray" href="#">
                         <img src={iconManage}/>
                         Manage
                     </a>
                 </li>
                 <li className="nav-item active">
-                    <a className="nav-link d-flex flex-column align-items-center" href="#">
+                    <a className="nav-link d-flex flex-column align-items-center text-gray" href="#">
                         <img src={iconBoards}/>
                         Boards
                     </a>
                 </li>
-                <li className="nav-item d-flex flex-column align-items-center">
+                <li className="nav-item d-flex flex-column align-items-center text-gray">
                     <a className="nav-link d-flex flex-column align-items-center" href="#">
                         <img src={iconSchedule}/>
                         Schedule
                     </a>
                 </li>
-                <li className="nav-item d-flex flex-column align-items-center">
+                <li className="nav-item d-flex flex-column align-items-center text-gray">
                     <a className="nav-link d-flex flex-column align-items-center" href="#">
                         <img src={iconReports}/>
                         Reports

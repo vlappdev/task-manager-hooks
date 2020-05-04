@@ -1,9 +1,8 @@
 @import 'mixins/flexbox';
 
-$color-gray:                #B7BEC7;
+$color-primary-gradient:    linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
 $color-gray-dark:           #707090;
 $color-blue:                #9EA7FC;
-$color-bg:                  #EEF2F9;
 $color-bg-2:                rgba(255, 255, 255, 0.5);
 $color-green:               #82C786;
 $color-rose:                #E57373;
@@ -27,7 +26,7 @@ body{
     background-color: $color-bg;
 }
 .navbar{
-    background: linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
+    background: $color-primary-gradient;
     position: relative;
     padding-left: 0;
     text-align: center;
@@ -67,7 +66,6 @@ body{
     }
 
     .nav-link{
-        color: $color-gray;
         padding: 30px 10px;
     }
 }
