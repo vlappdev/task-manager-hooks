@@ -26,5 +26,6 @@ branch feature/edit
 021 - refactored addNewTask
 022 - fixed edit and delete card
 023 - added custom-variables.scss
-024 - added mixins 
+024 - added mixins
+025 - moved colors to bootstrap  
 
