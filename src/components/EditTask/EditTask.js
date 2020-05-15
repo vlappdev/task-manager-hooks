@@ -70,7 +70,7 @@ class EditTask extends Component {
                                value={this.state.title}
                                onChange={this.handleOnChange}/>
                     </div>
-                    <button type="submit" className="btn btn-primary">Edit task</button>
+                    <button type="submit" className="btn btn-primary text-white">Edit task</button>
                 </form>
             </div>
         );

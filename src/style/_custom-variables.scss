@@ -1,5 +1,7 @@
-$body-bg:                          #EEF2F9;
+$body-bg:                           #EEF2F9;
 $body-color:                        #707090;
+
+$color-gray:                        #B7BEC7;
 
 
 
@@ -9,7 +11,7 @@ $theme-colors: (
         "succes":       #80D5CA,
         "orange":       #FFA66B,
         "dark-gray":    $body-color,
-        "gray":         #B7BEC7,
+        "gray":         $color-gray,
         "light-gray":   rgba(255, 255, 255, 0.5),
         "purple":       #8690DB
 );

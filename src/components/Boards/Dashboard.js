@@ -44,11 +44,11 @@ class Dashboard extends Component{
                     </div>
                     <div>
                         <img src={iconAvatar}/>
-                        <img src={iconAvatar}/>
-                        <img src={iconAvatar}/>
-                        <img src={iconAvatar}/>
-                        <img src={iconAvatar}/>
-                        <img src={iconAddUser}/>
+                        <img src={iconAvatar} className="p-2"/>
+                        <img src={iconAvatar} className="p-2"/>
+                        <img src={iconAvatar} className="p-2"/>
+                        <img src={iconAvatar} className="p-2"/>
+                        <img src={iconAddUser} className="p-2"/>
                     </div>
                 </div>
                 <div className="d-flex justify-content-between">

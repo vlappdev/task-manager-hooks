@@ -27,5 +27,9 @@ branch feature/edit
 022 - fixed edit and delete card
 023 - added custom-variables.scss
 024 - added mixins
-025 - moved colors to bootstrap  
+025 - moved colors to bootstrap
+
+## branch develop
+
+026 - fixed style  
 

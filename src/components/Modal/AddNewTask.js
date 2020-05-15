@@ -97,7 +97,7 @@ class AddNewTask extends Component{
                     {/*    <label htmlFor="descriptionTask">Description task</label>*/}
                     {/*    <textarea className="form-control" id="descriptionTask" rows="3" placeholder='Enter description'></textarea>*/}
                     {/*</div>*/}
-                    <button type="submit" className="btn btn-primary">Add new task</button>
+                    <button type="submit" className="btn btn-primary text-white">Add new task</button>
                 </form>
             </div>
         );
