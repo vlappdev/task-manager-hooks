@@ -18,3 +18,14 @@
 016 - fetch data from repo and fixed Dashboard
 017 - after submit new task, added functionality bask on button
 
+branch feature/edit
+
+018 - added basic functionality for edit task 
+019 - close "edit task page" after submit
+020 - added Dropdown with delete and edit on card
+021 - refactored addNewTask
+022 - fixed edit and delete card
+023 - added custom-variables.scss
+024 - added mixins
+025 - moved colors to bootstrap  
+

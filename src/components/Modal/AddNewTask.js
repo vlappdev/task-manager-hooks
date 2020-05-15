@@ -7,22 +7,22 @@ class AddNewTask extends Component{
         super(props);
 
         this.state = {
-            ...props.passData
-        };
+            cardId: null,
+            priority: 'low priority',
+            title:'',
+            messages: 2,
+            attachments: 1,
+            status: 'Backlog'
+        }
+    }
 
-        const currentCards = this.state.cards;
+    componentDidMount() {
+        const currentCards = this.props.passData.cards;
+        const newCardId = Math.max(...currentCards.map((card) => card.cardId)) + 1;
 
-        const initCard = {
-                            cardId: null,
-                            priority: 'low priority',
-                            title:'Enter task title',
-                            messages:2,
-                            attachments:1,
-                            status: 'Backlog'
-                        };
-
-        this.state.cards = [...currentCards, initCard]
-
+        this.setState({
+            cardId: newCardId
+        })
     }
 
     handleSubmit = (e) => {
@@ -30,44 +30,30 @@ class AddNewTask extends Component{
 
         this.addNewTask();
 
+        this.props.history.push('/')
+
         // this.setState({
         //     title:''
         // })
 
-        this.props.history.push('/')
     };
 
     handleOnChange = (e) => {
 
-        const cards = this.state.cards;
-
-        const index = this.state.cards.length - 1;
-
-        const initialCard = cards[index];
-        const newCard = { [e.target.name]: e.target.value };
-
-        cards[index]  = {...initialCard, ...newCard}
-
         this.setState({
-            cards: cards
-        });
+            [e.target.name]: e.target.value
+        })
     };
 
     addNewTask = () => {
 
-        const cards = this.state.cards;
+        const data =  this.props.passData
+        const currentCards = data.cards;
 
-        const cardId = Math.max(...cards.map((card) => card.cardId)) + 1;
+        const index = currentCards.length;
+        data.cards[index] = this.state;
 
-        this.setState( (prevState) =>{
-
-            const index = prevState.cards.length - 1;
-
-             return prevState.cards[index].cardId = cardId;
-
-        });
-
-        this.props.updateApp(this.state)
+        this.props.updateApp(data)
     };
 
     render() {

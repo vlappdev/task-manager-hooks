@@ -1,14 +1,13 @@
 @import 'mixins/flexbox';
+@import 'mixins/mixins';
 
-$color-gray:                #B7BEC7;
-$color-gray-dark:           #707090;
+$color-primary-gradient:    linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
+
 $color-blue:                #9EA7FC;
-$color-bg:                  #EEF2F9;
-$color-bg-2:                rgba(255, 255, 255, 0.5);
-$color-green:               #82C786;
-$color-rose:                #E57373;
+$color-green:               #80D5CA;
+$color-rose:                #D57ABC;
 $color-orange:              #FF9784;
-$color-white:              #FFFFFF;
+$color-white:               #ffffff;
 
 html{
     height: 100%;
@@ -24,17 +23,18 @@ body{
 }
 #root, .app{
     min-height: 100vh;
-    background-color: $color-bg;
 }
-.navbar{
-    background: linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
+.navbar {
+    background: $color-primary-gradient;
     position: relative;
     padding-left: 0;
     text-align: center;
     min-height: 60px;
 
-    .form-control::-webkit-input-placeholder {
-        color: #FFFFFF;
+    .form-control{
+        @include input_placeholder_prefix{
+            color:$color-white;
+        }
     }
 }
 .navbar-brand{
@@ -42,9 +42,6 @@ body{
     height: 100%;
     max-width: 120px;
     width: 100%;
-    background: rgba(50, 50, 93, 0.2);
-    margin: 0;
-    padding: 0;
     line-height: 1;
     @include flexbox;
     @include justify-content(center);
@@ -67,15 +64,10 @@ body{
     }
 
     .nav-link{
-        color: $color-gray;
         padding: 30px 10px;
     }
 }
-.board-container{
-    color: $color-gray-dark;
-}
 .status-1, .status-2, .status-3, .status-4{
-    background-color: $color-bg-2;
     max-width: 280px;
     width: 100%;
 }
@@ -112,20 +104,24 @@ body{
 .card-icon{
     height: 2.2rem;
 }
-.close{
-    opacity: 0.35 !important;
-    &:hover{
-        opacity: 0.50 !important;
-    }
-}
 .form-add-new-task{
     max-width: 400px;
 }
+.icon-three-dots{
+    height: 14px;
+    opacity: 0.8;
 
-.back-button{
-    bottom: -50px;
-    right: 0;
+    &:hover{
+        opacity: 1 !important;
+    }
 }
+
+.task-dropdown{
+    left: auto;
+    right: -10px;
+    min-width: auto;
+}
+
 
 
 

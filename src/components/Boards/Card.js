@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Dropdown from '../../components/Dropdown/Dropdown'
 import iconMessage from "../../assets/icon-message.svg";
 import iconAttach from "../../assets/icon-attach.svg";
 import iconAddUser from "../../assets/icon-add-user.svg";
@@ -7,10 +9,6 @@ import iconAvatar from "../../assets/icon-avatar.svg";
 
 class Card extends Component{
 
-    removeCard = (id) => {
-        this.props.setIdCard(id);
-    };
-
     render() {
 
         const card = this.props.card;
@@ -18,10 +16,10 @@ class Card extends Component{
 
         return (
             <div className="bg-white p-2 mt-3">
-                <button onClick={ () => this.removeCard(card.cardId) } type="button" className="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div className={ priorityColor + " text-white rounded-sm px-2 py-1"}>{ card.priority }</div>
+                <div className="d-flex justify-content-between">
+                    < div className={ priorityColor + " text-white rounded-sm px-2 py-1 mb-auto"}>{ card.priority }</div>
+                    <Dropdown cardId = {card.cardId} setIdCard={this.props.setIdCard}/>
+                </div>
                 <p className="mt-3">{ card.title }</p>
                 <div className="d-flex justify-content-between">
                     <div className="d-flex">
