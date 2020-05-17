@@ -31,5 +31,6 @@ branch feature/edit
 
 ## branch develop
 
-026 - fixed style  
+026 - fixed style
+027 - fixed style sidebar - active item  
 

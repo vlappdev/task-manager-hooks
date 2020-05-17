@@ -1,4 +1,5 @@
 import React, { Component }from 'react'
+import { NavLink } from 'react-router-dom'
 import { ReactComponent as IconManage} from "../assets/icon-manage.svg";
 import { ReactComponent as IconBoards} from "../assets/icon-boards.svg";
 import { ReactComponent as IconSchedule} from "../assets/icon-schedule.svg";
@@ -9,28 +10,28 @@ class SideMenu extends Component{
         return (
             <ul className="side-menu nav flex-column bg-white">
                 <li className="nav-item">
-                    <a className="nav-link d-flex flex-column align-items-center active text-gray" href="#">
+                    <NavLink to="/manage" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center active">
                         <IconManage className='side-menu-icon'/>
                         Manage
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-item active">
-                    <a className="nav-link d-flex flex-column align-items-center text-gray" href="#">
+                    <NavLink exact to="/"  activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
                         <IconBoards className='side-menu-icon'/>
                         Boards
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link d-flex flex-column align-items-center text-gray" href="#">
+                    <NavLink to="/schedule" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
                         <IconSchedule className='side-menu-icon'/>
                         Schedule
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link d-flex flex-column align-items-center text-gray" href="#">
+                    <NavLink to="/reports" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
                         <IconReports className='side-menu-icon'/>
                         Reports
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-item mt-auto">
                     <a className="nav-link d-flex flex-column align-items-center text-gray" href="#">
