@@ -38,10 +38,10 @@ class App extends Component{
                         <SideMenu/>
                         <Switch>
                             <Route exact path='/'>
-                                <Dashboard passData={ this.state } updateApp={ this.updateAppState }/> )}
+                                <Dashboard passData={ this.state } updateApp={ this.updateAppState }/>
                             </Route>
                             <Route path='/new-task'>
-                                <AddNewTask passData={ this.state } updateApp={ this.updateAppState } />)}
+                                <AddNewTask passData={ this.state } updateApp={ this.updateAppState } />
                             </Route>
                             <Route path='/edit/:id'>
                                 <EditTask passData={this.state} updateApp={ this.updateAppState }/>
