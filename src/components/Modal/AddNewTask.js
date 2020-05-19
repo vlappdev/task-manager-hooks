@@ -1,107 +1,91 @@
-import React, {Component} from 'react'
+import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 
 
-class AddNewTask extends Component{
+function AddNewTask(props) {
 
-    constructor(props){
-        super(props);
+    const [newTask, setNewTask] = useState({
+        cardId: null,
+        priority: 'low priority',
+        title:'',
+        messages: 2,
+        attachments: 1,
+        status: 'Backlog'
+    });
 
-        this.state = {
-            cardId: null,
-            priority: 'low priority',
-            title:'',
-            messages: 2,
-            attachments: 1,
-            status: 'Backlog'
-        }
-    }
-
-    componentDidMount() {
-        const currentCards = this.props.passData.cards;
+    useEffect(() => {
+        const currentCards = props.passData.cards;
         const newCardId = Math.max(...currentCards.map((card) => card.cardId)) + 1;
+        setNewTask({...newTask, cardId: newCardId})
+    }, []);
 
-        this.setState({
-            cardId: newCardId
-        })
-    }
-
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        this.addNewTask();
+        addNewTask();
 
-        this.props.history.push('/')
-
-        // this.setState({
-        //     title:''
-        // })
-
+        props.history.push('/')
     };
 
-    handleOnChange = (e) => {
-
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+    const handleOnChange = (e) => {
+        const { name, value } = e.target;
+        setNewTask( initTask  => ({...initTask, [name]: value}))
     };
 
-    addNewTask = () => {
-
-        const data =  this.props.passData
+    const addNewTask = () => {
+        const data =  props.passData;
         const currentCards = data.cards;
 
         const index = currentCards.length;
-        data.cards[index] = this.state;
+        data.cards[index] = newTask;
 
-        this.props.updateApp(data)
+        props.updateApp(data)
     };
 
-    render() {
-        return (
-            <div className="d-flex flex-grow-1 justify-content-center align-items-center">
-                <form onSubmit={this.handleSubmit} className="form-add-new-task w-100 position-relative">
-                    <div className="form-group">
-                        <label htmlFor="priority">Select priority</label>
-                        <select className="form-control" onChange={this.handleOnChange} name="priority" value={this.state.priority} id="priority">
-                            <option value="low priority">low priority</option>
-                            <option value="med priority">med priority</option>
-                            <option value="high priority">high priority</option>
-                        </select>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="taskTitle">Title task</label>
-                        <input type="text"
-                               className="form-control"
-                               id="taskTitle"
-                               name="title"
-                               value={this.state.taskTitle}
-                               onChange={this.handleOnChange}/>
-                    </div>
-                    {/*<div className="form-group">*/}
-                    {/*    <label htmlFor="messages">Messages</label>*/}
-                    {/*    <select className="form-control" value={this.state.messages} id="messages">*/}
-                    {/*        <option>1</option>*/}
-                    {/*        <option>2</option>*/}
-                    {/*        <option>3</option>*/}
-                    {/*    </select>*/}
-                    {/*</div>*/}
-                    {/*<div className="form-group">*/}
-                    {/*    <label htmlFor="attachments">Attachments</label>*/}
-                    {/*    <select className="form-control" value={this.state.attachments} id="attachments">*/}
-                    {/*        <option>1</option>*/}
-                    {/*        <option>2</option>*/}
-                    {/*        <option>3</option>*/}
-                    {/*    </select>*/}
-                    {/*</div>*/}
-                    {/*<div className="form-group">*/}
-                    {/*    <label htmlFor="descriptionTask">Description task</label>*/}
-                    {/*    <textarea className="form-control" id="descriptionTask" rows="3" placeholder='Enter description'></textarea>*/}
-                    {/*</div>*/}
-                    <button type="submit" className="btn btn-primary text-white">Add new task</button>
-                </form>
-            </div>
-        );
-    }
+    return (
+        <div className="d-flex flex-grow-1 justify-content-center align-items-center">
+            <form onSubmit={ handleSubmit } className="form-add-new-task w-100 position-relative">
+                <div className="form-group">
+                    <label htmlFor="priority">Select priority</label>
+                    <select className="form-control" onChange={ handleOnChange } name="priority" value={ newTask.priority} id="priority">
+                        <option value="low priority">low priority</option>
+                        <option value="med priority">med priority</option>
+                        <option value="high priority">high priority</option>
+                    </select>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="taskTitle">Title task</label>
+                    <input type="text"
+                           className="form-control"
+                           id="taskTitle"
+                           name="title"
+                           value={ newTask.taskTitle }
+                           onChange={ handleOnChange }/>
+                </div>
+                {/*<div className="form-group">*/}
+                {/*    <label htmlFor="messages">Messages</label>*/}
+                {/*    <select className="form-control" value={this.state.messages} id="messages">*/}
+                {/*        <option>1</option>*/}
+                {/*        <option>2</option>*/}
+                {/*        <option>3</option>*/}
+                {/*    </select>*/}
+                {/*</div>*/}
+                {/*<div className="form-group">*/}
+                {/*    <label htmlFor="attachments">Attachments</label>*/}
+                {/*    <select className="form-control" value={this.state.attachments} id="attachments">*/}
+                {/*        <option>1</option>*/}
+                {/*        <option>2</option>*/}
+                {/*        <option>3</option>*/}
+                {/*    </select>*/}
+                {/*</div>*/}
+                {/*<div className="form-group">*/}
+                {/*    <label htmlFor="descriptionTask">Description task</label>*/}
+                {/*    <textarea className="form-control" id="descriptionTask" rows="3" placeholder='Enter description'></textarea>*/}
+                {/*</div>*/}
+                <button type="submit" className="btn btn-primary text-white">Add new task</button>
+            </form>
+        </div>
+    );
 }
 
-export default AddNewTask
+export default withRouter(AddNewTask)

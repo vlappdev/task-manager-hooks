@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route }from 'react-router-dom'
 import Dashboard from './components/Boards/Dashboard'
 import AddNewTask from "./components/Modal/AddNewTask"
-import AppContext from './AppContext'
 import Navbar from './components/Navbar'
 import SideMenu from './components/SideMenu'
 import EditTask from './components/EditTask/EditTask'
@@ -38,16 +37,15 @@ class App extends Component{
                     <div className="d-flex flex-grow-1">
                         <SideMenu/>
                         <Switch>
-                            <AppContext.Provider value="dafault string from provider">
-                                <Route exact path='/' render={(routeProps) => (<Dashboard {...routeProps} passData={ this.state } updateApp={ this.updateAppState }/> )}
-                                />
-                                <Route path='/new-task'
-                                       render={(routeProps) => (<AddNewTask {...routeProps} passData={ this.state } updateApp={ this.updateAppState } />)}
-                                />
-                                <Route path='/edit/:id'>
-                                    <EditTask passData={this.state} updateApp={ this.updateAppState }/>
-                                </Route>
-                            </AppContext.Provider>
+                            <Route exact path='/'>
+                                <Dashboard passData={ this.state } updateApp={ this.updateAppState }/> )}
+                            </Route>
+                            <Route path='/new-task'>
+                                <AddNewTask passData={ this.state } updateApp={ this.updateAppState } />)}
+                            </Route>
+                            <Route path='/edit/:id'>
+                                <EditTask passData={this.state} updateApp={ this.updateAppState }/>
+                            </Route>
                         </Switch>
                     </div>
                 </div>
