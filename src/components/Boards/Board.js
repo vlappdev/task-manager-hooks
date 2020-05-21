@@ -18,7 +18,7 @@ class Board extends Component{
 
     render() {
         return(
-            <div className={ this.props.color + " p-3 border-top-3 border-top bg-light-gray rounded-lg d-flex flex-column align-items-stretch"}>
+            <div className={ this.props.color + " p-3 border-top-3 border-top bg-light-gray rounded-lg d-flex flex-column align-items-stretch box-shadow"}>
                 <h4>{ this.props.title }</h4>
                 <div className="flex-grow-1" ref={this.passRefElement}>
                     {

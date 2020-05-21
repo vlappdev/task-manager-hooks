@@ -46,7 +46,7 @@ class Dropdown extends Component {
                 </div>
 
                 { this.state.displayMenu ? (
-                        <div className="dropdown-menu d-block task-dropdown">
+                        <div className="dropdown-menu d-block task-dropdown box-shadow">
                             <Link to="" onClick={this.redirectToEditCard} className="dropdown-item text-dark-gray">Edit</Link>
                             <Link to="/" onClick={ (e) => this.removeCard(e, this.props.cardId) } className="dropdown-item">Delete</Link>
                         </div>

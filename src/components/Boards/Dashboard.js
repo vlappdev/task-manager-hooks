@@ -52,7 +52,7 @@ class Dashboard extends Component{
 
     render(){
         return(
-            <div className="board-container w-100 px-5 py-4">
+            <div className="board-container w-100 px-5 py-4 d-flex flex-column">
                 <div className="d-flex justify-content-between pb-4">
                     <div className="d-flex">
                         <h2>Studio Board</h2>
@@ -67,7 +67,7 @@ class Dashboard extends Component{
                         <img src={iconAddUser} className="p-2"/>
                     </div>
                 </div>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between flex-grow-1">
                     { this.props.passData.cardStatuses.map((statusItem, index) => {
                             const cards = this.props.passData.cards;
                             const cardsByStatus = cards.filter(card => card.status === statusItem.title);
