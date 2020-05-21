@@ -1,6 +1,7 @@
 @import 'mixins/flexbox';
 @import 'mixins/mixins';
 
+
 $color-primary-gradient:    linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
 
 $color-blue:                #9EA7FC;
@@ -8,6 +9,7 @@ $color-green:               #80D5CA;
 $color-rose:                #D57ABC;
 $color-orange:              #FF9784;
 $color-white:               #ffffff;
+$color-box-shadow:          #C9D1DE;
 
 html{
     height: 100%;
@@ -23,6 +25,9 @@ body{
 }
 #root, .app{
     min-height: 100vh;
+}
+.box-shadow{
+    box-shadow: 0 2px 8px $color-box-shadow;
 }
 .navbar {
     background: $color-primary-gradient;
@@ -145,6 +150,7 @@ body{
     left: auto;
     right: -10px;
     min-width: auto;
+    border: none;
 }
 
 
