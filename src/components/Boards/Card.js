@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Dropdown from '../../components/Dropdown/Dropdown'
+
 import iconMessage from "../../assets/icon-message.svg";
 import iconAttach from "../../assets/icon-attach.svg";
 import iconAddUser from "../../assets/icon-add-user.svg";

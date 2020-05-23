@@ -13,11 +13,9 @@ function EditTask(props) {
 
     useEffect(()=>{
 
-        const cardForEdit = props.passData.cards.filter(card => {
+        const cardForEdit = props.passData.cards.find(card => {
             return card.cardId === Number(props.match.params.id)
-        })[0];
-
-        console.log(cardForEdit)
+        });
 
         setTask({
             ...cardForEdit
@@ -41,8 +39,6 @@ function EditTask(props) {
         const {name, value} = e.target;
         setTask({...task, [name]: value})
     };
-
-    console.log(task)
 
     const handleSubmit = (e) => {
         e.preventDefault();

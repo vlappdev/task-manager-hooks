@@ -6,12 +6,6 @@ import iconAddTask from "../../assets/icon-add-task.svg";
 
 class Board extends Component{
 
-    // setCards = () => {
-    //     return this.props.cards.map((item, index) => {
-    //         return <Card key={ index } cards={ item }/>
-    //     })
-    // };
-
     passRefElement = (param) => {
         this.props.getRef(param)
     };

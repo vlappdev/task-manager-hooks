@@ -12,7 +12,7 @@ class Dashboard extends Component{
         const notDeletedCards = this.deleteCard(cardId)
 
         this.setState({
-                cards : [...notDeletedCards ]
+                cards : notDeletedCards
             }, this.updateAppState
         );
     };
@@ -34,11 +34,7 @@ class Dashboard extends Component{
         const options={};
 
         options.accepts = function(el, target, source){
-            if(source.parentElement.nextElementSibling === target.parentElement){
-                return true
-            } else {
-                return false
-            }
+            return source.parentElement.nextElementSibling === target.parentElement
         };
 
         Dragula(this.statusTaskContainers, options);
@@ -48,7 +44,22 @@ class Dashboard extends Component{
 
     collectTaskContainers = (param) => {
         this.statusTaskContainers.push(param);
-   };
+    };
+
+    setTaskStatuses = () => {
+        return this.props.passData.cardStatuses.map((statusItem, index) => {
+
+            const cards = this.props.passData.cards;
+            const cardsByStatus = cards.filter(card => card.status === statusItem.title);
+
+            return <Board
+                        key={ index } { ...statusItem }
+                        appProp={ this.update }
+                        passCards={ cardsByStatus }
+                        getRef={this.collectTaskContainers}
+                    />
+        })
+    };
 
     render(){
         return(
@@ -68,18 +79,7 @@ class Dashboard extends Component{
                     </div>
                 </div>
                 <div className="d-flex justify-content-between flex-grow-1">
-                    { this.props.passData.cardStatuses.map((statusItem, index) => {
-                            const cards = this.props.passData.cards;
-                            const cardsByStatus = cards.filter(card => card.status === statusItem.title);
-
-                            return <Board
-                                        key={ index } { ...statusItem }
-                                        appProp={ this.update }
-                                        passCards={ cardsByStatus }
-                                        getRef={this.collectTaskContainers}
-                                    />
-                        })
-                    }
+                    {this.setTaskStatuses()}
                 </div>
             </div>
         )
