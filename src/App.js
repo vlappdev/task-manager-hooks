@@ -14,7 +14,7 @@ class App extends Component{
     };
 
     componentDidMount() {
-        fetch('https://raw.githubusercontent.com/jahorinac/data/master/03-tasks.json')
+        fetch('https://raw.githubusercontent.com/jahorinac/data/03-hooks-react/03-hooks-react.json')
             .then(response =>{
                 return response.json()
             })
@@ -30,12 +30,13 @@ class App extends Component{
     };
 
     render(){
+        //console.log(...this.state.cards)
         return (
             <BrowserRouter>
                 <div className="app d-flex flex-column">
                     <Navbar/>
                     <div className="d-flex flex-grow-1">
-                        <SideMenu/>
+                        <SideMenu { ...this.state }/>
                         <Switch>
                             <Route exact path='/'>
                                 <Dashboard passData={ this.state } updateApp={ this.updateAppState }/>

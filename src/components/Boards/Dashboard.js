@@ -47,7 +47,7 @@ class Dashboard extends Component{
     };
 
     setTaskStatuses = () => {
-        return this.props.passData.cardStatuses.map((statusItem, index) => {
+        return this.props.passData.cardStatuses.slice(1).map((statusItem, index) => {
 
             const cards = this.props.passData.cards;
             const cardsByStatus = cards.filter(card => card.status === statusItem.title);
