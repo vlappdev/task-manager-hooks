@@ -6,6 +6,7 @@ import { ReactComponent as IconManage} from "../assets/icon-manage.svg";
 import { ReactComponent as IconBoards} from "../assets/icon-boards.svg";
 import { ReactComponent as IconSchedule} from "../assets/icon-schedule.svg";
 import { ReactComponent as IconReports} from "../assets/icon-reports.svg";
+import AllTasksContainer from "./AllTasksContainer";
 
 class SideMenu extends Component{
     render() {
@@ -13,7 +14,7 @@ class SideMenu extends Component{
             <>
                 <ul className="side-menu nav flex-column bg-white">
                     <li className="nav-item">
-                        <NavLink to="/Backlog" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center active">
+                        <NavLink to="/backlog" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center active">
                             <IconManage className='side-menu-icon'/>
                             Backlog
                         </NavLink>
@@ -25,9 +26,9 @@ class SideMenu extends Component{
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/schedule" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
+                        <NavLink to="/allTasks" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
                             <IconSchedule className='side-menu-icon'/>
-                            Schedule
+                            All Tasks
                         </NavLink>
                     </li>
                     <li className="nav-item">
@@ -45,6 +46,9 @@ class SideMenu extends Component{
                 </ul>
                 <Route path="/backlog">
                     <Backlog { ...this.props }/>
+                </Route>
+                <Route path="/allTasks">
+                    <AllTasksContainer { ...this.props }/>
                 </Route>
             </>
         )
