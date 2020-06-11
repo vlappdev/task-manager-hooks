@@ -8,13 +8,13 @@ class Navbar extends Component{
     render() {
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
-                <a className="navbar-brand text-white bg-purple p-0 m-0" href="#">hussle</a>
+                <a className="navbar-brand text-white bg-purple p-0 m-0 col-sm-2" href="#">hussle</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse offset-sm-2" id="navbarSupportedContent">
                     <form className="form-inline my-2 my-lg-0">
                         <button className="btn my-2 my-sm-0" type="submit">
                             <img src={iconSearch} alt=""/>

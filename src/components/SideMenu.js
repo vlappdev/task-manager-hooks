@@ -12,28 +12,28 @@ class SideMenu extends Component{
     render() {
         return (
             <>
-                <ul className="side-menu nav flex-column bg-white">
+                <ul className="side-menu nav flex-column bg-white col-sm-2 p-0 box-shadow">
                     <li className="nav-item">
-                        <NavLink to="/backlog" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center active">
-                            <IconManage className='side-menu-icon'/>
+                        <NavLink to="/backlog" activeClassName="active-link" className="active nav-link d-flex flex-column flex-lg-row align-items-center pl-4">
+                            <IconManage className='side-menu-icon mr-3'/>
                             Backlog
                         </NavLink>
                     </li>
                     <li className="nav-item active">
-                        <NavLink exact to="/"  activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
-                            <IconBoards className='side-menu-icon'/>
+                        <NavLink exact to="/"  activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">
+                            <IconBoards className='side-menu-icon mr-3'/>
                             Boards
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/allTasks" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
-                            <IconSchedule className='side-menu-icon'/>
+                        <NavLink to="/allTasks" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">
+                            <IconSchedule className='side-menu-icon mr-3'/>
                             All Tasks
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/reports" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center" href="#">
-                            <IconReports className='side-menu-icon'/>
+                        <NavLink to="/reports" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">
+                            <IconReports className='side-menu-icon mr-3'/>
                             Reports
                         </NavLink>
                     </li>

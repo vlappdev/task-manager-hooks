@@ -4,19 +4,20 @@
 
 $color-primary-gradient:    linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
 
-$color-blue:                #9EA7FC;
-$color-green:               #80D5CA;
-$color-rose:                #D57ABC;
-$color-orange:              #FF9784;
-$color-white:               #ffffff;
-$color-box-shadow:          #C9D1DE;
+$color-blue:                    #9EA7FC;
+$color-green:                   #80D5CA;
+$color-rose:                    #D57ABC;
+$color-orange:                  #FF9784;
+$color-white:                   #ffffff;
+$color-box-shadow:              #C9D1DE;
+$color-sidebar-active-hover:    $dropdown-link-hover-bg;
 
 html{
     height: 100%;
 }
 html, body{
     min-height: 100%;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
@@ -45,8 +46,6 @@ body{
 .navbar-brand{
     position: absolute;
     height: 100%;
-    max-width: 120px;
-    width: 100%;
     line-height: 1;
     @include flexbox;
     @include justify-content(center);
@@ -54,13 +53,12 @@ body{
 }
 .navbar-collapse{
     @include justify-content(space-between);
-    margin-left: 120px;
     width: 100%;
 }
 
 .side-menu{
     width: 100%;
-    max-width: 120px;
+    //max-width: 120px;
 }
 
 
@@ -72,6 +70,8 @@ body{
     &.active-link{
         color: $color-blue;
         border-left: 3px solid $color-blue;
+        background-color: $color-sidebar-active-hover;
+
 
         .side-menu-icon{
             fill: $color-blue;
@@ -86,6 +86,7 @@ body{
     }
     &:hover{
         color: $color-gray-hover;
+        background-color: $color-sidebar-active-hover;
 
         .side-menu-icon{
             fill: $color-gray-hover;
@@ -98,7 +99,7 @@ body{
 }
 
 .status-1, .status-2, .status-3, .status-4{
-    max-width: 280px;
+    max-width: 320px;
     width: 100%;
 }
 .status-1{
@@ -106,12 +107,15 @@ body{
 }
 .status-2{
     border-top-color: $color-orange !important;
+    margin-left: 1rem;
 }
 .status-3{
     border-top-color: $color-blue !important;
+    margin-left: 1rem;
 }
 .status-4{
     border-top-color: $color-green !important;
+    margin-left: 1rem;
 }
 .low-priority{
     background-color: $color-blue;

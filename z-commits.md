@@ -9,3 +9,4 @@
 06 - added Backlog component
 07 - added pagination in AllTasksContainer component
 08 - fixed links on pagination (page not jump)
+09 - fixed layout on Boards
