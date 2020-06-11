@@ -58,41 +58,42 @@ body{
 
 .side-menu{
     width: 100%;
-    //max-width: 120px;
 }
 
+.side-menu{
+    .nav-link{
+        color: $color-gray;
+        padding: 30px 10px;
+        border-left: 3px solid transparent;
 
-.nav-link{
-    color: $color-gray;
-    padding: 30px 10px;
-    border-left: 3px solid transparent;
-
-    &.active-link{
-        color: $color-blue;
-        border-left: 3px solid $color-blue;
-        background-color: $color-sidebar-active-hover;
+        &.active-link{
+            color: $color-blue;
+            border-left: 3px solid $color-blue;
+            background-color: $color-sidebar-active-hover;
 
 
-        .side-menu-icon{
-            fill: $color-blue;
-        }
-
-        &:hover{
             .side-menu-icon{
                 fill: $color-blue;
             }
-            color: $color-blue !important;
-        }
-    }
-    &:hover{
-        color: $color-gray-hover;
-        background-color: $color-sidebar-active-hover;
 
-        .side-menu-icon{
-            fill: $color-gray-hover;
+            &:hover{
+                .side-menu-icon{
+                    fill: $color-blue;
+                }
+                color: $color-blue !important;
+            }
+        }
+        &:hover{
+            color: $color-gray-hover;
+            background-color: $color-sidebar-active-hover;
+
+            .side-menu-icon{
+                fill: $color-gray-hover;
+            }
         }
     }
 }
+
 
 .side-menu-icon{
     fill: $color-gray;
