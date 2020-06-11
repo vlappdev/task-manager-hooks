@@ -10,3 +10,5 @@
 07 - added pagination in AllTasksContainer component
 08 - fixed links on pagination (page not jump)
 09 - fixed layout on Boards
+10 - fixed hover
+11 - fixed dashboard

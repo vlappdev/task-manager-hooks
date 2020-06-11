@@ -63,7 +63,7 @@ class Dashboard extends Component{
 
     render(){
         return(
-            <div className="board-container w-100 px-lg-5 px-3 py-4 d-flex flex-column">
+            <div className="board-container w-100 px-xl-5 px-3 py-4 d-flex flex-column">
                 <div className="d-flex justify-content-between pb-4">
                     <div className="d-flex">
                         <h2>Studio Board</h2>
