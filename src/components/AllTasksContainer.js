@@ -22,8 +22,8 @@ function AllTasksContainer(props) {
 
     const currentPage = tasks.slice(firstIndexOnPage, lastIndexOnPage);
 
-    const handleClick = (number) => {
-
+    const handleClick = (number, e) => {
+        e.preventDefault();
         navButtonsIsActive(number);
         setCurrentPageNumber(number)
     };
@@ -43,15 +43,15 @@ function AllTasksContainer(props) {
         }
     };
 
-    const prevPage = (currentPage) => {
-
+    const prevPage = (currentPage, e) => {
+        e.preventDefault();
         const prevPage = currentPage - 1;
         currentPage > Math.min(...pageNumbers) && setCurrentPageNumber(prevPage)
         navButtonsIsActive(prevPage);
     };
 
-    const nextPage = (currentPage) => {
-
+    const nextPage = (currentPage, e) => {
+        e.preventDefault();
         const nextPage = currentPage + 1;
         currentPage < Math.max(...pageNumbers) && setCurrentPageNumber(nextPage)
         navButtonsIsActive(nextPage);
@@ -78,17 +78,17 @@ function AllTasksContainer(props) {
             </ul>
             <ul className="pagination">
                 <li className={`page-item ${isPrevBtnActive}`}>
-                    <a onClick={ () => prevPage(currentPageNumber) } className="page-link" href="#">Previous</a>
+                    <a onClick={ (e) => prevPage(currentPageNumber, e) } className="page-link" href="#">Previous</a>
                 </li>
                 {
                     pageNumbers.map( (number, index)=> {
                          return <li key={index} className={`page-item ${isActive(number)}`}>
-                                    <a onClick={() => handleClick(number)} className="page-link" href="#">{number}</a>
+                                    <a onClick={(e) => handleClick(number, e)} className="page-link" href="#">{number}</a>
                                 </li>
                     })
                 }
                 <li className={`page-item ${isNextBtnActive}`}>
-                    <a onClick={() => nextPage(currentPageNumber)} className="page-link" href="#">Next</a>
+                    <a onClick={(e) => nextPage(currentPageNumber, e)} className="page-link" href="#">Next</a>
                 </li>
             </ul>
         </div>

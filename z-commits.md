@@ -8,3 +8,4 @@
 05 - fixed components (refactored)
 06 - added Backlog component
 07 - added pagination in AllTasksContainer component
+08 - fixed links on pagination (page not jump)
