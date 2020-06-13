@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 
 
-function AddNewTask(props) {
+function AddTask(props) {
 
     const [newTask, setNewTask] = useState({
         cardId: null,
@@ -88,4 +88,4 @@ function AddNewTask(props) {
     );
 }
 
-export default withRouter(AddNewTask)
+export default withRouter(AddTask)

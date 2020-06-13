@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route }from 'react-router-dom'
-import Dashboard from './components/Boards/Dashboard'
-import AddNewTask from "./components/Modal/AddNewTask"
-import Navbar from './components/Navbar'
-import SideMenu from './components/SideMenu'
-import EditTask from './components/EditTask/EditTask'
+import TaskStatusContainer from './components/board/TaskStatusContainer'
+import AddTask from "./components/AddTask"
+import Navbar from './components/layout/Navbar'
+import SideMenu from './components/layout/SideMenu'
+import EditTask from './components/EditTask'
 
 class App extends Component{
 
@@ -39,10 +39,10 @@ class App extends Component{
                         <SideMenu { ...this.state }/>
                         <Switch>
                             <Route exact path='/'>
-                                <Dashboard passData={ this.state } updateApp={ this.updateAppState }/>
+                                <TaskStatusContainer passData={ this.state } updateApp={ this.updateAppState }/>
                             </Route>
                             <Route path='/new-task'>
-                                <AddNewTask passData={ this.state } updateApp={ this.updateAppState } />
+                                <AddTask passData={ this.state } updateApp={ this.updateAppState } />
                             </Route>
                             <Route path='/edit/:id'>
                                 <EditTask passData={this.state} updateApp={ this.updateAppState }/>

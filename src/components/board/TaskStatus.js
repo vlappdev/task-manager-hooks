@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Card from "./Card";
+import Task from "./Task";
 import {Link} from "react-router-dom";
 import iconAddTask from "../../assets/icon-add-task.svg";
 
 
-class Board extends Component{
+class TaskStatus extends Component{
 
     passRefElement = (param) => {
         this.props.getRef(param)
@@ -17,7 +17,7 @@ class Board extends Component{
                 <div className="flex-grow-1" ref={this.passRefElement}>
                     {
                         this.props.passCards.map((card, index) => {
-                            return <Card key={ index } card={ card } setIdCard={this.props.appProp}/>
+                            return <Task key={ index } card={ card } setIdCard={this.props.appProp}/>
                         })
                     }
                 </div>
@@ -29,4 +29,4 @@ class Board extends Component{
     }
 }
 
-export default Board
+export default TaskStatus

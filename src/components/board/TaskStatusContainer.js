@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import Board from './Board'
+import TaskStatus from './TaskStatus'
 import Dragula from 'react-dragula';
-import iconDropDown from "../../assets/icon-drop-down.svg";
 import iconAvatar from "../../assets/icon-avatar.svg";
 import iconAddUser from "../../assets/icon-add-user.svg";
 
 
-class Dashboard extends Component{
+class TaskStatusContainer extends Component{
 
     update = cardId => {
         const notDeletedCards = this.deleteCard(cardId)
@@ -52,7 +51,7 @@ class Dashboard extends Component{
             const cards = this.props.passData.cards;
             const cardsByStatus = cards.filter(card => card.status === statusItem.title);
 
-            return <Board
+            return <TaskStatus
                         key={ index } { ...statusItem }
                         appProp={ this.update }
                         passCards={ cardsByStatus }
@@ -66,8 +65,7 @@ class Dashboard extends Component{
             <div className="board-container w-100 px-xl-5 px-3 py-4 d-flex flex-column">
                 <div className="d-flex justify-content-between pb-4">
                     <div className="d-flex">
-                        <h2>Studio Board</h2>
-                        <img src={iconDropDown}/>
+                        <h2>Board</h2>
                     </div>
                     <div>
                         <img src={iconAvatar}/>
@@ -86,4 +84,4 @@ class Dashboard extends Component{
     }
 }
 
-export default Dashboard
+export default TaskStatusContainer

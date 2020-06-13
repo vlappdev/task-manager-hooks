@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import iconSearch from "../assets/icon-search.svg";
-import iconMail from "../assets/icon-mail.svg";
-import iconAlert from "../assets/icon-alert.svg";
-import iconAvatar from "../assets/icon-avatar.svg";
+import iconSearch from "../../assets/icon-search.svg";
+import iconMail from "../../assets/icon-mail.svg";
+import iconAlert from "../../assets/icon-alert.svg";
+import iconAvatar from "../../assets/icon-avatar.svg";
 
 class Navbar extends Component{
     render() {

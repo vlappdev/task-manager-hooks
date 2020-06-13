@@ -1,12 +1,12 @@
 import React, { Component }from 'react'
 import { NavLink, Route } from 'react-router-dom'
-import Backlog from './Backlog';
+import Backlog from '../backlog/Backlog';
 
-import { ReactComponent as IconManage} from "../assets/icon-manage.svg";
-import { ReactComponent as IconBoards} from "../assets/icon-boards.svg";
-import { ReactComponent as IconSchedule} from "../assets/icon-schedule.svg";
-import { ReactComponent as IconReports} from "../assets/icon-reports.svg";
-import AllTasksContainer from "./AllTasksContainer";
+import { ReactComponent as IconManage} from "../../assets/icon-manage.svg";
+import { ReactComponent as IconBoards} from "../../assets/icon-boards.svg";
+import { ReactComponent as IconSchedule} from "../../assets/icon-schedule.svg";
+import { ReactComponent as IconReports} from "../../assets/icon-reports.svg";
+import AllTasksContainer from "../all_tasks/AllTasksContainer";
 
 class SideMenu extends Component{
     render() {

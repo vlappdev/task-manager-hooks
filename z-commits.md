@@ -1,7 +1,7 @@
 
 # branch develop
 
-01 - refactored AddNewTask - in Hooks 
+01 - refactored AddTask - in Hooks 
 02 - refactored EditTask - in Hooks
 03 - added react-dragula (functionality drag and drop)
 04 - fixed style - added box shadows
@@ -12,3 +12,4 @@
 09 - fixed layout on Boards
 10 - fixed hover
 11 - fixed dashboard
+12 - fixed structure of files

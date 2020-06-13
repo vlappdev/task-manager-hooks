@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Dropdown from '../../components/Dropdown/Dropdown'
+import Dropdown from './Dropdown'
 
 import iconMessage from "../../assets/icon-message.svg";
 import iconAttach from "../../assets/icon-attach.svg";
@@ -7,7 +7,7 @@ import iconAddUser from "../../assets/icon-add-user.svg";
 import iconAvatar from "../../assets/icon-avatar.svg";
 
 
-class Card extends Component{
+class Task extends Component{
 
     render() {
 
@@ -41,4 +41,4 @@ class Card extends Component{
 
 }
 
-export default Card
+export default Task
