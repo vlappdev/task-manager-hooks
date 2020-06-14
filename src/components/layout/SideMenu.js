@@ -22,7 +22,7 @@ class SideMenu extends Component{
                     <li className="nav-item active">
                         <NavLink exact to="/"  activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">
                             <IconBoards className='side-menu-icon mr-3'/>
-                            Boards
+                            Board
                         </NavLink>
                     </li>
                     <li className="nav-item">
@@ -36,12 +36,6 @@ class SideMenu extends Component{
                             <IconReports className='side-menu-icon mr-3'/>
                             Reports
                         </NavLink>
-                    </li>
-                    <li className="nav-item mt-auto">
-                        <a className="nav-link d-flex flex-column align-items-center text-gray" href="#">
-                            <IconReports className='side-menu-icon'/>
-                            Reports
-                        </a>
                     </li>
                 </ul>
                 <Route path="/backlog">

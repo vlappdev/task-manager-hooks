@@ -15,3 +15,4 @@
 12 - fixed structure of files
 13 - fixed style for (add task link)
 14 - added back button on AddTask and EditTask
+15 - removed Report link
