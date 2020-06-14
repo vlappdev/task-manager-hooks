@@ -13,3 +13,5 @@
 10 - fixed hover
 11 - fixed dashboard
 12 - fixed structure of files
+13 - fixed style for (add task link)
+14 - added back button on AddTask and EditTask

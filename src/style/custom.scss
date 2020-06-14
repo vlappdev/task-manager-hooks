@@ -169,6 +169,9 @@ body{
     border: none;
 }
 
+.pagination{
+    @include user-select-none;
+}
 
 
 

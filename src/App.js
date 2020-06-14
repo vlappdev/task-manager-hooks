@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route }from 'react-router-dom'
 import TaskStatusContainer from './components/board/TaskStatusContainer'
-import AddTask from "./components/AddTask"
+import AddTask from "./components/board/AddTask"
 import Navbar from './components/layout/Navbar'
 import SideMenu from './components/layout/SideMenu'
-import EditTask from './components/EditTask'
+import EditTask from './components/board/EditTask'
 
 class App extends Component{
 

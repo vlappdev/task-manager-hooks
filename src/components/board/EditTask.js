@@ -68,7 +68,10 @@ function EditTask(props) {
                            value={ task.title}
                            onChange={ handleOnChange}/>
                 </div>
-                <button type="submit" className="btn btn-primary text-white">Edit task</button>
+                <div className="d-flex justify-content-between">
+                    <button type="submit" className="btn btn-primary text-white">Edit task</button>
+                    <button className="btn text-primary border" onClick={() => props.history.push('/')}>Back</button>
+                </div>
             </form>
         </div>
     );

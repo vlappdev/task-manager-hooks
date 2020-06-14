@@ -82,7 +82,10 @@ function AddTask(props) {
                 {/*    <label htmlFor="descriptionTask">Description task</label>*/}
                 {/*    <textarea className="form-control" id="descriptionTask" rows="3" placeholder='Enter description'></textarea>*/}
                 {/*</div>*/}
-                <button type="submit" className="btn btn-primary text-white">Add new task</button>
+                <div className="d-flex justify-content-between">
+                    <button type="submit" className="btn btn-primary text-white">Add new task</button>
+                    <button onClick={() => props.history.push('/')} className="btn text-primary border">Back</button>
+                </div>
             </form>
         </div>
     );
