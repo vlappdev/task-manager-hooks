@@ -10,6 +10,7 @@ $color-rose:                    #D57ABC;
 $color-orange:                  #FF9784;
 $color-white:                   #ffffff;
 $color-box-shadow:              #C9D1DE;
+$color-purple:                  #5464fa;
 $color-sidebar-active-hover:    $dropdown-link-hover-bg;
 
 html{
@@ -94,6 +95,16 @@ body{
     }
 }
 
+.add-task-link{
+    .add-task-icon{
+        fill: $color-blue;
+    }
+    &:hover{
+        .add-task-icon{
+            fill: $color-purple;
+        }
+    }
+}
 
 .side-menu-icon{
     fill: $color-gray;

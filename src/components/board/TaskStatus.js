@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import Task from "./Task";
 import {Link} from "react-router-dom";
-import iconAddTask from "../../assets/icon-add-task.svg";
+import { ReactComponent as IconManage } from "../../assets/icon-add-task.svg"
 
 
 class TaskStatus extends Component{
@@ -13,7 +13,7 @@ class TaskStatus extends Component{
     render() {
         return(
             <div className={ this.props.color + " p-3 border-top-3 border-top bg-light-gray rounded-lg d-flex flex-column align-items-stretch box-shadow"}>
-                <h4>{ this.props.title }</h4>
+                <h4 className="text-capitalize">{ this.props.title }</h4>
                 <div className="flex-grow-1" ref={this.passRefElement}>
                     {
                         this.props.passCards.map((card, index) => {
@@ -21,9 +21,15 @@ class TaskStatus extends Component{
                         })
                     }
                 </div>
-                <div className="text-center mt-4 mb-2">
-                    <Link to='/new-task'>Add task <img className="ml-2" src={iconAddTask} alt=''/></Link>
-                </div>
+                {
+                    this.props.title === "to do" &&
+                    <div className="text-center mt-4 mb-2">
+                        <Link to='/new-task' className="add-task-link d-inline-flex align-items-center text-decoration-none">
+                            Add task
+                            <IconManage className="add-task-icon ml-2"/>
+                        </Link>
+                    </div>
+                }
             </div>
         )
     }
