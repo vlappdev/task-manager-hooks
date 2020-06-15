@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TaskStatus from './TaskStatus'
 import Dragula from 'react-dragula';
-import iconAvatar from "../../assets/icon-avatar.svg";
-import iconAddUser from "../../assets/icon-add-user.svg";
+import { ReactComponent as IconAvatar } from "../../assets/icon-avatar.svg";
+import { ReactComponent as IconAddUser } from "../../assets/icon-add-user.svg";
 
 
 class TaskStatusContainer extends Component{
@@ -67,13 +67,12 @@ class TaskStatusContainer extends Component{
                     <div className="d-flex">
                         <h2>Board</h2>
                     </div>
-                    <div>
-                        <img src={iconAvatar}/>
-                        <img src={iconAvatar} className="p-2"/>
-                        <img src={iconAvatar} className="p-2"/>
-                        <img src={iconAvatar} className="p-2"/>
-                        <img src={iconAvatar} className="p-2"/>
-                        <img src={iconAddUser} className="p-2"/>
+                    <div className="d-flex align-items-center">
+                        <IconAvatar className="ml-2" />
+                        <IconAvatar className="ml-2" />
+                        <IconAvatar className="ml-2" />
+                        <IconAvatar className="ml-2" />
+                        <IconAddUser className="ml-2"/>
                     </div>
                 </div>
                 <div className="d-flex justify-content-between flex-grow-1">

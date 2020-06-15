@@ -24,15 +24,15 @@ class Task extends Component{
                 <div className="d-flex justify-content-between">
                     <div className="d-flex">
                         <div className="d-flex align-items-center">
-                            <img className="mr-1" src={ iconMessage }/>
+                            <img className="mr-1" src={ iconMessage } alt=""/>
                             <span>{ card.messages }</span>
-                            <img className="mr-1 ml-3" src={ iconAttach }/>
+                            <img className="mr-1 ml-3" src={ iconAttach } alt=""/>
                             <span>{ card.attachments }</span>
                         </div>
                     </div>
                     <div>
-                        <img className="card-icon pr-2" src={ iconAddUser }/>
-                        <img className="card-icon" src={ iconAvatar }/>
+                        <img className="card-icon pr-2" src={ iconAddUser } alt=""/>
+                        <img className="card-icon" src={ iconAvatar } alt=""/>
                     </div>
                 </div>
             </div>

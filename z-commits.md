@@ -16,3 +16,5 @@
 13 - fixed style for (add task link)
 14 - added back button on AddTask and EditTask
 15 - removed Report link
+16 - added priorityColor in AllTasks and Backlog
+17 - fixed images and links
