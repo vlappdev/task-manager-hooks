@@ -63,7 +63,7 @@ function AllTasksContainer(props) {
     };
 
     return (
-        <div className="w-100 px-5 py-4">
+        <div className="all-tasks w-100 px-5 py-4">
             <div className="pb-4">
                 <div>
                     <h2>All Tasks</h2>
@@ -72,7 +72,8 @@ function AllTasksContainer(props) {
             <ul className="list-group">
                 {
                     currentPage.map( task => {
-                        return <li key={ task.cardId } className="list-group-item">{task.title}</li>
+                        const priorityColor = task.priority.replace(" ", "-");
+                        return <li key={ task.cardId } className={`list-group-item ${priorityColor}`}>{task.title}</li>
                     })
                 }
             </ul>

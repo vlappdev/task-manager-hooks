@@ -129,21 +129,24 @@ body{
     border-top-color: $color-green !important;
     margin-left: 1rem;
 }
-.low-priority{
-    background-color: $color-blue;
-    display: inline-block;
-    font-size: .85rem;
+.task{
+    .low-priority{
+        background-color: $color-blue;
+        display: inline-block;
+        font-size: .85rem;
+    }
+    .med-priority{
+        background-color: $color-green;
+        display: inline-block;
+        font-size: .85rem;
+    }
+    .high-priority{
+        background-color: $color-rose;
+        display: inline-block;
+        font-size: .85rem;
+    }
 }
-.med-priority{
-    background-color: $color-green;
-    display: inline-block;
-    font-size: .85rem;
-}
-.high-priority{
-    background-color: $color-rose;
-    display: inline-block;
-    font-size: .85rem;
-}
+
 .border-top-3{
     border-top-width: 3px !important;
 }
@@ -161,17 +164,29 @@ body{
         opacity: 1 !important;
     }
 }
-
 .task-dropdown{
     left: auto;
     right: -10px;
     min-width: auto;
     border: none;
 }
-
 .pagination{
     @include user-select-none;
 }
+
+.backlog,
+.all-tasks{
+    .low-priority{
+        border-left: 0.50rem solid $color-blue
+    }
+    .med-priority{
+        border-left: 0.50rem solid $color-green
+    }
+    .high-priority{
+        border-left: 0.50rem solid $color-rose
+    }
+}
+
 
 
 

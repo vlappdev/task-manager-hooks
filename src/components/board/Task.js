@@ -15,7 +15,7 @@ class Task extends Component{
         const priorityColor = card.priority.replace(' ', '-')
 
         return (
-            <div className="bg-white p-2 mt-3 box-shadow">
+            <div className="task bg-white p-2 mt-3 box-shadow">
                 <div className="d-flex justify-content-between">
                     < div className={ priorityColor + " text-white rounded-sm px-2 py-1 mb-auto"}>{ card.priority }</div>
                     <Dropdown cardId = {card.cardId} setIdCard={this.props.setIdCard}/>

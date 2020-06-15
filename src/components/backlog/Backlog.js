@@ -7,12 +7,13 @@ function Backlog(props) {
         return props.cards.filter(task => {
             return task.status === 'backlog'
         }).map( task => {
-            return <li key={task.cardId} className="list-group-item">{ task.title }</li>
+            const priorityColor = task.priority.replace(" ", "-")
+            return <li key={task.cardId} className={`list-group-item ${priorityColor}`}>{ task.title }</li>
         });
     };
 
     return (
-        <div className="w-100 px-5 py-4">
+        <div className="backlog w-100 px-5 py-4">
             <div className="pb-4">
                 <div>
                     <h2>Backlog</h2>
