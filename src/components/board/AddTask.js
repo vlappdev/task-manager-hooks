@@ -16,8 +16,11 @@ function AddTask(props) {
     useEffect(() => {
         const currentCards = props.passData.cards;
         const newCardId = Math.max(...currentCards.map((card) => card.cardId)) + 1;
-        setNewTask({...newTask, cardId: newCardId})
-    }, []);
+
+        setNewTask((newTask)=> {
+            return {...newTask, cardId: newCardId}
+        })
+    }, [props.passData.cards]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

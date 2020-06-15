@@ -21,7 +21,7 @@ function EditTask(props) {
             ...cardForEdit
         })
 
-    }, []);
+    }, [props.passData.cards, props.match.params.id]);
 
     const editCard = () => {
 
