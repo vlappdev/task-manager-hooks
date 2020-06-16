@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/03-hooks-react/static/css/main.09965f23.chunk.css",
+    "main.js": "/03-hooks-react/static/js/main.0e1875e6.chunk.js",
+    "main.js.map": "/03-hooks-react/static/js/main.0e1875e6.chunk.js.map",
+    "runtime-main.js": "/03-hooks-react/static/js/runtime-main.f7cfcdca.js",
+    "runtime-main.js.map": "/03-hooks-react/static/js/runtime-main.f7cfcdca.js.map",
+    "static/css/2.4c62a1fd.chunk.css": "/03-hooks-react/static/css/2.4c62a1fd.chunk.css",
+    "static/js/2.0b1441a7.chunk.js": "/03-hooks-react/static/js/2.0b1441a7.chunk.js",
+    "static/js/2.0b1441a7.chunk.js.map": "/03-hooks-react/static/js/2.0b1441a7.chunk.js.map",
+    "index.html": "/03-hooks-react/index.html",
+    "precache-manifest.de9f7760dac5f7fdaa02deafc50aa795.js": "/03-hooks-react/precache-manifest.de9f7760dac5f7fdaa02deafc50aa795.js",
+    "service-worker.js": "/03-hooks-react/service-worker.js",
+    "static/css/2.4c62a1fd.chunk.css.map": "/03-hooks-react/static/css/2.4c62a1fd.chunk.css.map",
+    "static/css/main.09965f23.chunk.css.map": "/03-hooks-react/static/css/main.09965f23.chunk.css.map",
+    "static/js/2.0b1441a7.chunk.js.LICENSE.txt": "/03-hooks-react/static/js/2.0b1441a7.chunk.js.LICENSE.txt",
+    "static/media/icon-add-task.b7d6958d.svg": "/03-hooks-react/static/media/icon-add-task.b7d6958d.svg",
+    "static/media/icon-add-user.svg": "/03-hooks-react/static/media/icon-add-user.076673e1.svg",
+    "static/media/icon-alert.svg": "/03-hooks-react/static/media/icon-alert.a86adb13.svg",
+    "static/media/icon-attach.svg": "/03-hooks-react/static/media/icon-attach.8ff6e68d.svg",
+    "static/media/icon-avatar.svg": "/03-hooks-react/static/media/icon-avatar.9bf5f99a.svg",
+    "static/media/icon-boards.d51ded8b.svg": "/03-hooks-react/static/media/icon-boards.d51ded8b.svg",
+    "static/media/icon-mail.svg": "/03-hooks-react/static/media/icon-mail.55f6eff1.svg",
+    "static/media/icon-manage.1679b905.svg": "/03-hooks-react/static/media/icon-manage.1679b905.svg",
+    "static/media/icon-message.svg": "/03-hooks-react/static/media/icon-message.b80042c6.svg",
+    "static/media/icon-reports.33479d24.svg": "/03-hooks-react/static/media/icon-reports.33479d24.svg",
+    "static/media/icon-schedule.c643414a.svg": "/03-hooks-react/static/media/icon-schedule.c643414a.svg",
+    "static/media/icon-search.svg": "/03-hooks-react/static/media/icon-search.dabce41e.svg",
+    "static/media/icon-three-dots.svg": "/03-hooks-react/static/media/icon-three-dots.a91576d7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7cfcdca.js",
+    "static/css/2.4c62a1fd.chunk.css",
+    "static/js/2.0b1441a7.chunk.js",
+    "static/css/main.09965f23.chunk.css",
+    "static/js/main.0e1875e6.chunk.js"
+  ]
+}
