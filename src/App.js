@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Switch, Route }from 'react-router-dom'
+import { HashRouter, Switch, Route }from 'react-router-dom'
 import TaskStatusContainer from './components/board/TaskStatusContainer'
 import AddTask from "./components/board/AddTask"
 import Navbar from './components/layout/Navbar'
@@ -32,7 +32,7 @@ class App extends Component{
     render(){
         //console.log(...this.state.cards)
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="app d-flex flex-column">
                     <Navbar/>
                     <div className="d-flex flex-grow-1">
@@ -50,7 +50,7 @@ class App extends Component{
                         </Switch>
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         )
     }
 }
