@@ -1,0 +1,195 @@
+@import 'mixins/flexbox';
+@import 'mixins/mixins';
+
+
+$color-primary-gradient:    linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
+
+$color-blue:                    #9EA7FC;
+$color-green:                   #80D5CA;
+$color-rose:                    #D57ABC;
+$color-orange:                  #FF9784;
+$color-white:                   #ffffff;
+$color-box-shadow:              #C9D1DE;
+$color-purple:                  #5464fa;
+$color-sidebar-active-hover:    $dropdown-link-hover-bg;
+
+html{
+    height: 100%;
+}
+html, body{
+    min-height: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+#root, .app{
+    min-height: 100vh;
+}
+.box-shadow{
+    box-shadow: 0 2px 8px $color-box-shadow;
+}
+.navbar {
+    background: $color-primary-gradient;
+    position: relative;
+    padding-left: 0;
+    text-align: center;
+    min-height: 60px;
+
+    .form-control{
+        @include input_placeholder_prefix{
+            color:$color-white;
+        }
+    }
+}
+.navbar-brand{
+    position: absolute;
+    height: 100%;
+    line-height: 1;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+.navbar-collapse{
+    @include justify-content(space-between);
+    width: 100%;
+}
+
+.side-menu{
+    width: 100%;
+}
+
+.side-menu{
+    .nav-link{
+        color: $color-gray;
+        padding: 30px 10px;
+        border-left: 3px solid transparent;
+
+        &.active-link{
+            color: $color-blue;
+            border-left: 3px solid $color-blue;
+            background-color: $color-sidebar-active-hover;
+
+
+            .side-menu-icon{
+                fill: $color-blue;
+            }
+
+            &:hover{
+                .side-menu-icon{
+                    fill: $color-blue;
+                }
+                color: $color-blue !important;
+            }
+        }
+        &:hover{
+            color: $color-gray-hover;
+            background-color: $color-sidebar-active-hover;
+
+            .side-menu-icon{
+                fill: $color-gray-hover;
+            }
+        }
+    }
+}
+
+.add-task-link{
+    .add-task-icon{
+        fill: $color-blue;
+    }
+    &:hover{
+        .add-task-icon{
+            fill: $color-purple;
+        }
+    }
+}
+
+.side-menu-icon{
+    fill: $color-gray;
+}
+
+.status-1, .status-2, .status-3, .status-4{
+    max-width: 320px;
+    width: 100%;
+}
+.status-1{
+    border-top-color: $color-rose !important;
+}
+.status-2{
+    border-top-color: $color-orange !important;
+    margin-left: 1rem;
+}
+.status-3{
+    border-top-color: $color-blue !important;
+    margin-left: 1rem;
+}
+.status-4{
+    border-top-color: $color-green !important;
+    margin-left: 1rem;
+}
+.task{
+    .low-priority{
+        background-color: $color-blue;
+        display: inline-block;
+        font-size: .85rem;
+    }
+    .med-priority{
+        background-color: $color-green;
+        display: inline-block;
+        font-size: .85rem;
+    }
+    .high-priority{
+        background-color: $color-rose;
+        display: inline-block;
+        font-size: .85rem;
+    }
+}
+
+.border-top-3{
+    border-top-width: 3px !important;
+}
+.card-icon{
+    height: 2.2rem;
+}
+.form-add-new-task{
+    max-width: 400px;
+}
+.icon-three-dots{
+    height: 14px;
+    opacity: 0.8;
+
+    &:hover{
+        opacity: 1 !important;
+    }
+}
+.task-dropdown{
+    left: auto;
+    right: -10px;
+    min-width: auto;
+    border: none;
+}
+.pagination{
+    @include user-select-none;
+}
+
+.backlog,
+.all-tasks{
+    .low-priority{
+        border-left: 0.50rem solid $color-blue
+    }
+    .med-priority{
+        border-left: 0.50rem solid $color-green
+    }
+    .high-priority{
+        border-left: 0.50rem solid $color-rose
+    }
+}
+
+
+
+
+
+
+
