@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function AllTasksContainer(props) {
 
@@ -58,7 +59,6 @@ function AllTasksContainer(props) {
     };
 
     const isActive = number =>{
-
         return number === currentPageNumber? "active": "";
     };
 
@@ -79,17 +79,18 @@ function AllTasksContainer(props) {
             </ul>
             <ul className="pagination">
                 <li className={`page-item ${isPrevBtnActive}`}>
-                    <a onClick={ (e) => prevPage(currentPageNumber, e) } className="page-link" href="#">Previous</a>
+                    <Link to="" onClick={ (e) => prevPage(currentPageNumber, e) } className="page-link">Previous</Link>
                 </li>
                 {
                     pageNumbers.map( (number, index)=> {
                          return <li key={index} className={`page-item ${isActive(number)}`}>
-                                    <a onClick={(e) => handleClick(number, e)} className="page-link" href="#">{number}</a>
+                                    <Link to="" onClick={(e) => handleClick(number, e)}
+                                          className="page-link">{number}</Link>
                                 </li>
                     })
                 }
                 <li className={`page-item ${isNextBtnActive}`}>
-                    <a onClick={(e) => nextPage(currentPageNumber, e)} className="page-link" href="#">Next</a>
+                    <Link to="" onClick={(e) => nextPage(currentPageNumber, e)} className="page-link">Next</Link>
                 </li>
             </ul>
         </div>
