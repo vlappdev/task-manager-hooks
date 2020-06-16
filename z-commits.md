@@ -18,3 +18,5 @@
 15 - removed Report link
 16 - added priorityColor in AllTasks and Backlog
 17 - fixed images and links
+18 - fixed AddTask and EditTask
+19 - fixed links in AllTaskContainer

@@ -33,8 +33,8 @@ class Dropdown extends Component {
         this.hideDropdownMenu(!e.defaultPrevented)
     };
 
-    removeCard = (evt, id) => {
-        this.hideDropdownMenu(!evt.defaultPrevented);
+    removeCard = (e, id) => {
+        this.hideDropdownMenu(!e.defaultPrevented);
         this.props.setIdCard(id);
     };
 
