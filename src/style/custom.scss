@@ -110,8 +110,11 @@ body{
     fill: $color-gray;
 }
 
-.status-1, .status-2, .status-3, .status-4{
-    max-width: 320px;
+.status-1,
+.status-2,
+.status-3,
+.status-4{
+    max-width: 360px;
     width: 100%;
 }
 .status-1{
