@@ -23,3 +23,4 @@
 20 - added deploy command
 21 - fixed header placeholder
 22 - fixed layout task status
+21 - fixed style

@@ -1,9 +1,7 @@
 @import 'mixins/flexbox';
 @import 'mixins/mixins';
 
-
-$color-primary-gradient:    linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
-
+$color-primary-gradient:        linear-gradient(90deg, #9EA7FC 0%, #65B6F7 124.87%);
 $color-blue:                    #9EA7FC;
 $color-green:                   #80D5CA;
 $color-rose:                    #D57ABC;
@@ -56,12 +54,9 @@ body{
     @include justify-content(space-between);
     width: 100%;
 }
-
 .side-menu{
     width: 100%;
-}
 
-.side-menu{
     .nav-link{
         color: $color-gray;
         padding: 30px 10px;
@@ -105,11 +100,9 @@ body{
         }
     }
 }
-
 .side-menu-icon{
     fill: $color-gray;
 }
-
 .status-1,
 .status-2,
 .status-3,
@@ -149,7 +142,6 @@ body{
         font-size: .85rem;
     }
 }
-
 .border-top-3{
     border-top-width: 3px !important;
 }
@@ -176,7 +168,6 @@ body{
 .pagination{
     @include user-select-none;
 }
-
 .backlog,
 .all-tasks{
     .low-priority{
