@@ -21,3 +21,4 @@
 18 - fixed AddTask and EditTask
 19 - fixed links in AllTaskContainer
 20 - added deploy command
+21 - fixed header placeholder
