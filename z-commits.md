@@ -20,3 +20,4 @@
 17 - fixed images and links
 18 - fixed AddTask and EditTask
 19 - fixed links in AllTaskContainer
+20 - added deploy command

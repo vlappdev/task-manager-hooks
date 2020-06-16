@@ -38,10 +38,13 @@ body{
     text-align: center;
     min-height: 60px;
 
-    .form-control{
-        @include input_placeholder_prefix{
-            color:$color-white;
-        }
+    //.form-control{
+    //    @include input_placeholder_prefix{
+    //        color:$color-white;
+    //    }
+    //}
+    .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color-white;
     }
 }
 .navbar-brand{
