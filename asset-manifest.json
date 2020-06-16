@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/03-hooks-react/static/css/main.c4a553e7.chunk.css",
+    "main.css": "/03-hooks-react/static/css/main.09965f23.chunk.css",
     "main.js": "/03-hooks-react/static/js/main.55c284ac.chunk.js",
     "main.js.map": "/03-hooks-react/static/js/main.55c284ac.chunk.js.map",
     "runtime-main.js": "/03-hooks-react/static/js/runtime-main.d5ac8c1a.js",
@@ -9,10 +9,10 @@
     "static/js/2.319a0c4c.chunk.js": "/03-hooks-react/static/js/2.319a0c4c.chunk.js",
     "static/js/2.319a0c4c.chunk.js.map": "/03-hooks-react/static/js/2.319a0c4c.chunk.js.map",
     "index.html": "/03-hooks-react/index.html",
-    "precache-manifest.96a073c118992e7c8cdfdedfb9f155e6.js": "/03-hooks-react/precache-manifest.96a073c118992e7c8cdfdedfb9f155e6.js",
+    "precache-manifest.a204d05997d35e67f9e58a4313859be7.js": "/03-hooks-react/precache-manifest.a204d05997d35e67f9e58a4313859be7.js",
     "service-worker.js": "/03-hooks-react/service-worker.js",
     "static/css/2.4c62a1fd.chunk.css.map": "/03-hooks-react/static/css/2.4c62a1fd.chunk.css.map",
-    "static/css/main.c4a553e7.chunk.css.map": "/03-hooks-react/static/css/main.c4a553e7.chunk.css.map",
+    "static/css/main.09965f23.chunk.css.map": "/03-hooks-react/static/css/main.09965f23.chunk.css.map",
     "static/js/2.319a0c4c.chunk.js.LICENSE.txt": "/03-hooks-react/static/js/2.319a0c4c.chunk.js.LICENSE.txt",
     "static/media/icon-add-task.b7d6958d.svg": "/03-hooks-react/static/media/icon-add-task.b7d6958d.svg",
     "static/media/icon-add-user.svg": "/03-hooks-react/static/media/icon-add-user.076673e1.svg",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.d5ac8c1a.js",
     "static/css/2.4c62a1fd.chunk.css",
     "static/js/2.319a0c4c.chunk.js",
-    "static/css/main.c4a553e7.chunk.css",
+    "static/css/main.09965f23.chunk.css",
     "static/js/main.55c284ac.chunk.js"
   ]
 }
