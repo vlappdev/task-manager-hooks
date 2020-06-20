@@ -31,12 +31,12 @@ class SideMenu extends Component{
                             All Tasks
                         </NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink to="/reports" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">
-                            <IconReports className='side-menu-icon mr-3'/>
-                            Reports
-                        </NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink to="/reports" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">*/}
+                    {/*        <IconReports className='side-menu-icon mr-3'/>*/}
+                    {/*        Reports*/}
+                    {/*    </NavLink>*/}
+                    {/*</li>*/}
                 </ul>
                 <Route path="/backlog">
                     <Backlog { ...this.props }/>
