@@ -25,3 +25,4 @@
 22 - fixed layout task status
 23 - fixed style
 24 - added README file
+25 - added title AddTask

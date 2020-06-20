@@ -48,6 +48,7 @@ function AddTask(props) {
     return (
         <div className="d-flex flex-grow-1 justify-content-center align-items-center">
             <form onSubmit={ handleSubmit } className="form-add-new-task w-100 position-relative">
+                <h3 className="text-center ">Add new task</h3>
                 <div className="form-group">
                     <label htmlFor="priority">Select priority</label>
                     <select className="form-control" onChange={ handleOnChange } name="priority" value={ newTask.priority} id="priority">
