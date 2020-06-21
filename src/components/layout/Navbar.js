@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import iconSearch from "../../assets/icon-search.svg";
 import iconMail from "../../assets/icon-mail.svg";
 import iconAlert from "../../assets/icon-alert.svg";
 import iconAvatar from "../../assets/icon-avatar.svg";
 
-class Navbar extends Component{
+class Navbar extends PureComponent{
     render() {
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">

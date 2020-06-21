@@ -1,14 +1,11 @@
-import React, { Component }from 'react'
-import { NavLink, Route } from 'react-router-dom'
-import Backlog from '../backlog/Backlog';
+import React, { PureComponent } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { ReactComponent as IconManage} from "../../assets/icon-manage.svg";
 import { ReactComponent as IconBoards} from "../../assets/icon-boards.svg";
 import { ReactComponent as IconSchedule} from "../../assets/icon-schedule.svg";
-//import { ReactComponent as IconReports} from "../../assets/icon-reports.svg";
-import AllTasksContainer from "../all_tasks/AllTasksContainer";
 
-class SideMenu extends Component{
+class SideMenu extends PureComponent{
     render() {
         return (
             <>
@@ -31,19 +28,7 @@ class SideMenu extends Component{
                             All Tasks
                         </NavLink>
                     </li>
-                    {/*<li className="nav-item">*/}
-                    {/*    <NavLink to="/reports" activeClassName="active-link" className="nav-link d-flex flex-column align-items-center flex-column flex-lg-row pl-4" href="#">*/}
-                    {/*        <IconReports className='side-menu-icon mr-3'/>*/}
-                    {/*        Reports*/}
-                    {/*    </NavLink>*/}
-                    {/*</li>*/}
                 </ul>
-                <Route path="/backlog">
-                    <Backlog { ...this.props }/>
-                </Route>
-                <Route path="/allTasks">
-                    <AllTasksContainer { ...this.props }/>
-                </Route>
             </>
         )
     }

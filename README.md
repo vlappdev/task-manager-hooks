@@ -49,8 +49,8 @@ Visit: http://localhost:3000
  - TaskStatus
  - Task
  - Dropdown
- - Navbar
- - SideMenu
+ - Navbar (PureComponent)
+ - SideMenu (PureComponent)
  
  ### Functional components (Hooks)
  

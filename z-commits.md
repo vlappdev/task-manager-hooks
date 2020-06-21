@@ -28,4 +28,6 @@
 25 - added title AddTask
 26 - added screenshot to README file
 27 - move screenshot of app
+28 - added description of components
+29 - changed Navbar and SideMenu component to PureComponent and refactored buttons 
 

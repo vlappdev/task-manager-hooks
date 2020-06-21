@@ -47,6 +47,11 @@ function EditTask(props) {
         props.history.push('/');
     };
 
+    const handleBack = (e) => {
+        e.preventDefault();
+        props.history.push('/')
+    };
+
     return (
         <div className="d-flex flex-grow-1 justify-content-center align-items-center">
             <form onSubmit={ handleSubmit} className="form-add-new-task w-100 position-relative">
@@ -70,7 +75,7 @@ function EditTask(props) {
                 </div>
                 <div className="d-flex justify-content-between">
                     <button type="submit" className="btn btn-primary text-white">Edit task</button>
-                    <button className="btn text-primary border" onClick={() => props.history.push('/')}>Back</button>
+                    <button className="btn text-primary border" onClick={ handleBack }>Back</button>
                 </div>
             </form>
         </div>

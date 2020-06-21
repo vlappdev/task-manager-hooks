@@ -5,6 +5,8 @@ import AddTask from "./components/board/AddTask"
 import Navbar from './components/layout/Navbar'
 import SideMenu from './components/layout/SideMenu'
 import EditTask from './components/board/EditTask'
+import Backlog from "./components/backlog/Backlog";
+import AllTasksContainer from "./components/all_tasks/AllTasksContainer";
 
 class App extends Component{
 
@@ -30,7 +32,6 @@ class App extends Component{
     };
 
     render(){
-        //console.log(...this.state.cards)
         return (
             <HashRouter>
                 <div className="app d-flex flex-column">
@@ -46,6 +47,12 @@ class App extends Component{
                             </Route>
                             <Route path='/edit/:id'>
                                 <EditTask passData={this.state} updateApp={ this.updateAppState }/>
+                            </Route>
+                            <Route path="/backlog">
+                                <Backlog { ...this.state }/>
+                            </Route>
+                            <Route path="/allTasks">
+                                <AllTasksContainer { ...this.state }/>
                             </Route>
                         </Switch>
                     </div>

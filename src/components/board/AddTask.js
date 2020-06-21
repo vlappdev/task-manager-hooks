@@ -45,6 +45,11 @@ function AddTask(props) {
         props.updateApp(data)
     };
 
+    const handleBack = (e) => {
+        e.preventDefault();
+        props.history.push('/')
+    };
+
     return (
         <div className="d-flex flex-grow-1 justify-content-center align-items-center">
             <form onSubmit={ handleSubmit } className="form-add-new-task w-100 position-relative">
@@ -68,7 +73,7 @@ function AddTask(props) {
                 </div>
                 <div className="d-flex justify-content-between">
                     <button type="submit" className="btn btn-primary text-white">Add new task</button>
-                    <button onClick={() => props.history.push('/')} className="btn text-primary border">Back</button>
+                    <button onClick={ handleBack } className="btn text-primary border">Back</button>
                 </div>
             </form>
         </div>
