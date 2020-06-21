@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Backlog(props) {
-    console.log(props);
 
     const setTaskBacklog = () => {
         return props.cards.filter(task => {

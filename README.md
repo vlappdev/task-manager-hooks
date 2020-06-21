@@ -42,3 +42,19 @@ Visit: http://localhost:3000
 * Delete task
 * Drag and drop task
 * Display all tasks (pagination)
+
+### Class components
+
+ - TaskStatusContainer
+ - TaskStatus
+ - Task
+ - Dropdown
+ - Navbar
+ - SideMenu
+ 
+ ### Functional components (Hooks)
+ 
+ - EditTask
+ - AddTask
+ - Backlog
+ - AllTasksContainer
