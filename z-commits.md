@@ -26,4 +26,6 @@
 23 - fixed style
 24 - added README file
 25 - added title AddTask
-25 - added screenshot to README file
+26 - added screenshot to README file
+27 - move screenshot of app
+

@@ -2,7 +2,7 @@ Demo : https://jahorinac.github.io/03-hooks-react
 
 ## Task Manager ( React app with Bootstrap )
 
-![alt text](https://github.com/jahorinac/03-hooks-react/blob/master/app.jpg?raw=true)
+![alt text](https://github.com/jahorinac/03-hooks-react/blob/master/src/assets/screenshot-app.jpg?raw=true)
 
 ### Installation / Development
 
