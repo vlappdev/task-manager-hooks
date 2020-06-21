@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/03-hooks-react/static/css/main.a724737d.chunk.css",
-    "main.js": "/03-hooks-react/static/js/main.109c0978.chunk.js",
-    "main.js.map": "/03-hooks-react/static/js/main.109c0978.chunk.js.map",
+    "main.js": "/03-hooks-react/static/js/main.c3d40a77.chunk.js",
+    "main.js.map": "/03-hooks-react/static/js/main.c3d40a77.chunk.js.map",
     "runtime-main.js": "/03-hooks-react/static/js/runtime-main.d5ac8c1a.js",
     "runtime-main.js.map": "/03-hooks-react/static/js/runtime-main.d5ac8c1a.js.map",
     "static/css/2.4c62a1fd.chunk.css": "/03-hooks-react/static/css/2.4c62a1fd.chunk.css",
-    "static/js/2.319a0c4c.chunk.js": "/03-hooks-react/static/js/2.319a0c4c.chunk.js",
-    "static/js/2.319a0c4c.chunk.js.map": "/03-hooks-react/static/js/2.319a0c4c.chunk.js.map",
+    "static/js/2.26252af1.chunk.js": "/03-hooks-react/static/js/2.26252af1.chunk.js",
+    "static/js/2.26252af1.chunk.js.map": "/03-hooks-react/static/js/2.26252af1.chunk.js.map",
     "index.html": "/03-hooks-react/index.html",
-    "precache-manifest.308d26ccb8f4b25a539b2309ccc61e63.js": "/03-hooks-react/precache-manifest.308d26ccb8f4b25a539b2309ccc61e63.js",
+    "precache-manifest.cd0da96b09752d8a32b97cd0e7e3ba90.js": "/03-hooks-react/precache-manifest.cd0da96b09752d8a32b97cd0e7e3ba90.js",
     "service-worker.js": "/03-hooks-react/service-worker.js",
     "static/css/2.4c62a1fd.chunk.css.map": "/03-hooks-react/static/css/2.4c62a1fd.chunk.css.map",
     "static/css/main.a724737d.chunk.css.map": "/03-hooks-react/static/css/main.a724737d.chunk.css.map",
-    "static/js/2.319a0c4c.chunk.js.LICENSE.txt": "/03-hooks-react/static/js/2.319a0c4c.chunk.js.LICENSE.txt",
+    "static/js/2.26252af1.chunk.js.LICENSE.txt": "/03-hooks-react/static/js/2.26252af1.chunk.js.LICENSE.txt",
     "static/media/icon-add-task.b7d6958d.svg": "/03-hooks-react/static/media/icon-add-task.b7d6958d.svg",
     "static/media/icon-add-user.svg": "/03-hooks-react/static/media/icon-add-user.076673e1.svg",
     "static/media/icon-alert.svg": "/03-hooks-react/static/media/icon-alert.a86adb13.svg",
@@ -23,7 +23,6 @@
     "static/media/icon-mail.svg": "/03-hooks-react/static/media/icon-mail.55f6eff1.svg",
     "static/media/icon-manage.1679b905.svg": "/03-hooks-react/static/media/icon-manage.1679b905.svg",
     "static/media/icon-message.svg": "/03-hooks-react/static/media/icon-message.b80042c6.svg",
-    "static/media/icon-reports.33479d24.svg": "/03-hooks-react/static/media/icon-reports.33479d24.svg",
     "static/media/icon-schedule.c643414a.svg": "/03-hooks-react/static/media/icon-schedule.c643414a.svg",
     "static/media/icon-search.svg": "/03-hooks-react/static/media/icon-search.dabce41e.svg",
     "static/media/icon-three-dots.svg": "/03-hooks-react/static/media/icon-three-dots.a91576d7.svg"
@@ -31,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.d5ac8c1a.js",
     "static/css/2.4c62a1fd.chunk.css",
-    "static/js/2.319a0c4c.chunk.js",
+    "static/js/2.26252af1.chunk.js",
     "static/css/main.a724737d.chunk.css",
-    "static/js/main.109c0978.chunk.js"
+    "static/js/main.c3d40a77.chunk.js"
   ]
 }
