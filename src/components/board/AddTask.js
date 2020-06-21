@@ -10,7 +10,7 @@ function AddTask(props) {
         title:'',
         messages: 2,
         attachments: 1,
-        status: 'Backlog'
+        status: 'backlog'
     });
 
     useEffect(() => {

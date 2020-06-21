@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Backlog(props) {
 
-    const setTaskBacklog = () => {
-        return props.cards.filter(task => {
+    const [tasksInBacklog, setTasksInBacklog] = useState([]);
+
+    useEffect(()=>{
+        const tasks = props.cards.filter((task) => {
             return task.status === 'backlog'
-        }).map( task => {
-            const priorityColor = task.priority.replace(" ", "-")
-            return <li key={task.cardId} className={`list-group-item ${priorityColor}`}>{ task.title }</li>
         });
-    };
+
+        setTasksInBacklog(tasks);
+    }, [props.cards]);
 
     return (
         <div className="backlog w-100 px-5 py-4">
@@ -19,7 +20,14 @@ function Backlog(props) {
                 </div>
             </div>
             <ul className="list-group">
-                { setTaskBacklog() }
+                {
+                    tasksInBacklog.map( task => {
+                        return <li className={`list-group-item ${task.priority.replace(" ", "-")}`}
+                                   key={task.cardId}>
+                                    { task.title }
+                                </li>
+                    })
+                }
             </ul>
         </div>
 
