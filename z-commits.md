@@ -32,4 +32,5 @@
 29 - changed Navbar and SideMenu component to PureComponent and refactored buttons
 30 - refactored Backlog 
 31 - update package.json
+32 - update App
 

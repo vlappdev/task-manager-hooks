@@ -16,7 +16,7 @@ class App extends Component{
     };
 
     componentDidMount() {
-        fetch('https://raw.githubusercontent.com/jahorinac/data/03-hooks-react/03-hooks-react.json')
+        fetch('https://raw.githubusercontent.com/vlappdev/data/master/tesk-manager-hooks.json')
             .then(response =>{
                 return response.json()
             })
