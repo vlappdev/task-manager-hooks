@@ -33,4 +33,5 @@
 30 - refactored Backlog 
 31 - update package.json
 32 - update App
+33 - update README file
 

@@ -1,4 +1,4 @@
-Demo : https://jahorinac.github.io/03-hooks-react
+Demo : https://vlappdev.github.io/task-manager-hooks
 
 ## Task Manager ( React app with Bootstrap )
 
