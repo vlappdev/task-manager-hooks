@@ -1,6 +1,6 @@
 {
-  "homepage": "https://jahorinac.github.io/03-hooks-react",
-  "name": "03-hooks-react",
+  "homepage": "https://vlappdev.github.io/task-manager-hooks",
+  "name": "task-manager-hooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
