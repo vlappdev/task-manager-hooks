@@ -34,4 +34,5 @@
 31 - update package.json
 32 - update App
 33 - update README file
+34 - added .editorconfig file
 
